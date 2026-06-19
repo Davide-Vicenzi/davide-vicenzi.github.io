@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davide-vicenzi.github.io/sitemap.xml

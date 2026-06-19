@@ -1,16 +1,13 @@
 (function(){
   'use strict';
 
-  /* Helper: converte una NodeList in array senza dipendere da NodeList.forEach */
   function toArray(nodeList){
     var arr = [];
     for(var i=0; i<nodeList.length; i++){ arr.push(nodeList[i]); }
     return arr;
   }
 
-  /* ============ THEME (dark / light) ============
-     Isolato in try/catch: un eventuale errore qui non deve mai
-     impedire la visualizzazione del resto della pagina. */
+  /* ============ THEME (dark / light) ============ */
   try {
     var root = document.documentElement;
     var themeToggle = document.getElementById('theme-toggle');
@@ -43,7 +40,7 @@
         try { localStorage.setItem(STORAGE_KEY, next); } catch(e){ /* noop */ }
       });
     }
-  } catch(e){ /* il tema non è critico: in caso di errore resta il default chiaro */ }
+  } catch(e){ /* il tema non è critico */ }
 
   /* ============ MOBILE NAV ============ */
   try {
@@ -66,7 +63,7 @@
         });
       }
     }
-  } catch(e){ /* il menu mobile non è critico per la lettura dei contenuti */ }
+  } catch(e){ /* il menu mobile non è critico */ }
 
   /* ============ SCROLL-SPY ============ */
   try {
@@ -91,51 +88,117 @@
     }
   } catch(e){ /* lo scroll-spy è puramente decorativo */ }
 
-  /* ============ MODULO DI CONTATTO ============
-     Il sito è statico (nessun backend): all'invio componiamo una mail
-     pre-compilata con i dati inseriti e apriamo il client di posta. */
+  /* ============ AVATAR NELLA NAV (appare quando la hero esce dal viewport) ============ */
+  try {
+    var heroSection = document.getElementById('home');
+    var navAvatar = document.getElementById('nav-avatar');
+
+    if(heroSection && navAvatar && 'IntersectionObserver' in window){
+      var avatarObserver = new IntersectionObserver(function(entries){
+        /* Quando la hero NON è più visibile, mostra l'avatar nella nav */
+        var isHeroVisible = entries[0].isIntersecting;
+        navAvatar.classList.toggle('is-visible', !isHeroVisible);
+      }, { threshold: 0.1 });
+
+      avatarObserver.observe(heroSection);
+    }
+  } catch(e){ /* l'avatar nella nav non è critico */ }
+
+  /* ============ MODULO DI CONTATTO — FORMSPREE ============
+     Invio silente via fetch: nessuna apertura di programmi di posta.
+     Per attivarlo:
+       1. Registrarsi su https://formspree.io
+       2. Creare un form e copiare l'ID (es. xpwzabcd)
+       3. Nell'HTML, impostare data-action="https://formspree.io/f/IL_TUO_ID"
+  ============================================================ */
   try {
     var contactForm = document.getElementById('contact-form');
+    var submitBtn = document.getElementById('form-submit-btn');
+    var feedback = document.getElementById('form-feedback');
+
+    function showFeedback(type, msg){
+      if(!feedback){ return; }
+      feedback.textContent = msg;
+      feedback.className = 'form-feedback ' + type;
+    }
+
+    function clearFeedback(){
+      if(!feedback){ return; }
+      feedback.textContent = '';
+      feedback.className = 'form-feedback';
+    }
 
     if(contactForm){
       contactForm.addEventListener('submit', function(ev){
         ev.preventDefault();
+        clearFeedback();
 
+        /* Validazione nativa HTML5 */
         if(typeof contactForm.checkValidity === 'function' && !contactForm.checkValidity()){
           if(typeof contactForm.reportValidity === 'function'){ contactForm.reportValidity(); }
           return;
         }
 
-        function val(id){
-          var el = document.getElementById(id);
-          return el && el.value ? el.value.trim() : '';
+        var endpoint = contactForm.getAttribute('data-action');
+
+        /* Fallback: se Formspree non è ancora configurato, apre il client di posta */
+        if(!endpoint || endpoint.indexOf('YOUR_FORM_ID') !== -1){
+          var nome     = (document.getElementById('cf-nome')     || {}).value || '';
+          var cognome  = (document.getElementById('cf-cognome')  || {}).value || '';
+          var azienda  = (document.getElementById('cf-azienda')  || {}).value || '';
+          var email    = (document.getElementById('cf-email')    || {}).value || '';
+          var msg      = (document.getElementById('cf-messaggio')|| {}).value || '';
+
+          var subject  = 'Richiesta di contatto da ' + (nome + ' ' + cognome).trim();
+          var body     = [
+            'Nome: ' + nome,
+            'Cognome: ' + cognome,
+            'Azienda: ' + (azienda || '—'),
+            'Email per il ricontatto: ' + email,
+            '',
+            'Messaggio:',
+            msg
+          ].join('\n');
+
+          window.location.href = 'mailto:davide.vicenzi.1994@gmail.com'
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body='    + encodeURIComponent(body);
+          return;
         }
 
-        var nome = val('cf-nome');
-        var cognome = val('cf-cognome');
-        var azienda = val('cf-azienda');
-        var email = val('cf-email');
-        var messaggio = val('cf-messaggio');
+        /* Invio via Formspree */
+        if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Invio in corso…'; }
 
-        var subject = 'Richiesta di contatto da ' + (nome + ' ' + cognome).trim();
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        })
+        .then(function(response){
+          if(response.ok){
+            showFeedback('success', 'Messaggio inviato. Ti risponderò al più presto, grazie!');
+            contactForm.reset();
+          } else {
+            return response.json().then(function(data){
+              var errMsg = (data && data.errors)
+                ? data.errors.map(function(e){ return e.message; }).join(', ')
+                : 'Errore nell\'invio. Riprova o scrivimi direttamente via email.';
+              showFeedback('error', errMsg);
+            });
+          }
+        })
+        .catch(function(){
+          showFeedback('error', 'Connessione non riuscita. Riprova o scrivimi direttamente via email.');
+        })
+        .finally(function(){
+          if(submitBtn){
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Invia messaggio <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+          }
+        });
 
-        var bodyLines = [
-          'Nome: ' + nome,
-          'Cognome: ' + cognome,
-          'Azienda: ' + (azienda || '—'),
-          'Email per il ricontatto: ' + email,
-          '',
-          'Messaggio:',
-          messaggio
-        ];
-
-        var mailto = 'mailto:davide.vicenzi.1994@gmail.com'
-          + '?subject=' + encodeURIComponent(subject)
-          + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-
-        window.location.href = mailto;
       });
     }
-  } catch(e){ /* in caso di errore l'utente può sempre scrivere ai contatti diretti elencati */ }
+  } catch(e){ /* in caso di errore l'utente può sempre scrivere ai contatti diretti */ }
 
 })();

@@ -4,10 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Davide Vicenzi — Consulente BI &amp; Performance Management, Ingegnere di processo</title>
-<meta name="description" content="Davide Vicenzi, consulente informatico in Business Intelligence e Corporate Performance Management su piattaforma Board, con un percorso da ingegnere chimico di processo.">
+<meta name="description" content="Davide Vicenzi, libero professionista in Business Intelligence e Corporate Performance Management su piattaforma Board, con un percorso da ingegnere chimico di processo.">
+
+<!-- Open Graph / LinkedIn — l'immagine og-image.jpg va caricata nella root del repository GitHub -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/">
+<meta property="og:title"       content="Davide Vicenzi — Consulente BI &amp; Performance Management">
+<meta property="og:description" content="Libero professionista in Business Intelligence e Corporate Performance Management su piattaforma Board, con un percorso da ingegnere chimico di processo.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.jpg">
+<meta property="og:locale"      content="it_IT">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Davide Vicenzi — Consulente BI &amp; Performance Management">
+<meta name="twitter:description" content="Libero professionista in Business Intelligence e Corporate Performance Management su piattaforma Board, con un percorso da ingegnere chimico di processo.">
+<meta name="twitter:image"       content="https://davide-vicenzi.github.io/og-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/">
+<meta name="author" content="Davide Vicenzi">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,17 +43,27 @@
 
 <header class="site-header" id="site-header">
   <div class="nav-inner">
-    <a href="#home" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+
+    <div class="logo-area">
+      <!-- Avatar miniatura: appare quando la hero esce dal viewport -->
+      <div class="nav-avatar" id="nav-avatar" aria-hidden="true">
+        <span class="nav-avatar-initials">DV</span>
+        <!-- Sostituire con: <img src="foto.jpg" alt="Davide Vicenzi"> -->
+      </div>
+      <a href="#home" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
 
     <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
       <a href="#home">Home</a>
-      <a href="#studi">Studi</a>
-      <a href="#lavoro">Lavoro</a>
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#lavoro">Consulenza</a>
       <a href="#clienti">Clienti</a>
+      <a href="#studi">Formazione</a>
       <a href="#contatti">Contatti</a>
     </nav>
 
     <div class="nav-actions">
+      <a href="#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
       <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
         <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
         <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
@@ -36,15 +73,25 @@
         <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
       </button>
     </div>
+
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ 0 — HERO ============ -->
   <section id="home" class="hero">
     <div class="hero-grid">
       <div class="hero-content reveal">
+
+        <!-- Placeholder foto profilo — sostituire con <img> quando disponibile -->
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar" id="hero-avatar" role="img" aria-label="Foto profilo (placeholder)">
+            <span class="hero-avatar-initials" aria-hidden="true">DV</span>
+            <span class="hero-avatar-hint" aria-hidden="true">foto</span>
+          </div>
+        </div>
+
         <p class="eyebrow">Consulente BI &amp; Performance Management — Ingegnere di processo</p>
         <h1>Davide Vicenzi</h1>
         <p class="hero-lead">
@@ -54,7 +101,7 @@
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#lavoro">
-            Scopri il percorso
+            Scopri le aree di consulenza
             <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn-outline" href="#contatti">Contattami</a>
@@ -86,7 +133,7 @@
     </div>
   </section>
 
-  <!-- ============ CHI SONO ============ -->
+  <!-- ============ 01 — CHI SONO ============ -->
   <section id="chi-sono" class="section chi-sono-section">
     <div class="section-inner two-col">
       <div class="col-main reveal">
@@ -102,10 +149,12 @@
             non solo sulla carta.
           </p>
           <p>
-            Nel 2022 ho affiancato a questo percorso una formazione specifica in analisi dei dati — SQL, Python,
-            dashboard — e da gennaio 2026 ho aperto la partita IVA per dedicarmi alla consulenza informatica,
-            collaborando con <strong>VSP Consulting</strong> su soluzioni di Business Intelligence e Corporate
-            Performance Management costruite sulla piattaforma Board.
+            Nel 2022 ho integrato questo percorso con una formazione specifica in analisi dei dati — SQL, Python,
+            dashboard — e da gennaio 2026 esercito come libero professionista nel campo della consulenza
+            informatica, in collaborazione con
+            <a href="https://www.vspconsulting.it/" target="_blank" rel="noopener" class="inline-link"><strong>VSP Consulting</strong></a>
+            — partner ufficiale Board — su soluzioni di Business Intelligence e Corporate Performance Management
+            sulla piattaforma Board.
           </p>
           <p>
             Continuo inoltre a seguire, in modo più contenuto, un cliente storico nel settore degli impianti per
@@ -126,11 +175,14 @@
             </div>
             <div class="fact-row">
               <dt>Dal 2026</dt>
-              <dd>Consulente BI &amp; Performance Management</dd>
+              <dd>Libero professionista — Consulente BI &amp; Performance Management</dd>
             </div>
             <div class="fact-row">
               <dt>Collaborazione</dt>
-              <dd>VSP Consulting — partner Board</dd>
+              <dd>
+                <a href="https://www.vspconsulting.it/" target="_blank" rel="noopener" class="inline-link">VSP Consulting</a>
+                — partner Board
+              </dd>
             </div>
             <div class="fact-row">
               <dt>Strumenti</dt>
@@ -146,12 +198,148 @@
     </div>
   </section>
 
-  <!-- ============ PERCORSO DI STUDI ============ -->
+  <!-- ============ 02 — AREE CONSULENZIALI ============ -->
+  <section id="lavoro" class="section lavoro-section">
+    <div class="section-inner">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span class="eyebrow-num">02</span> Aree consulenziali</p>
+        <h2>Dal campo impiantistico alla consulenza digitale</h2>
+        <p class="section-lead">
+          Quasi un decennio di ingegneria di processo, oggi applicato alla consulenza informatica: due linguaggi
+          diversi, lo stesso metodo.
+        </p>
+      </header>
+
+      <h3 class="subhead reveal">Ambiti di intervento</h3>
+      <p class="prose reveal">
+        Da gennaio 2026 esercito la libera professione, dividendo l'attività tra la consulenza informatica per
+        <a href="https://www.vspconsulting.it/" target="_blank" rel="noopener" class="inline-link">VSP Consulting</a>
+        — Business Intelligence, Corporate Performance Management e sviluppo applicativo — e una
+        collaborazione più contenuta nel settore degli impianti per l'abbattimento degli inquinanti atmosferici.
+        Di seguito, le tipologie di intervento più frequenti, descritte nella loro struttura tipica: i casi
+        studio con risultati specifici verranno pubblicati con il consenso dei singoli clienti.
+      </p>
+
+      <div class="case-grid reveal">
+
+        <article class="case-card">
+          <div class="case-card-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 9.5h17M9.5 9.5V21"/></svg>
+            <div>
+              <p class="case-tag"><span class="case-tag-num">Ambito 01</span></p>
+              <h4>BI, pianificazione e controllo di gestione</h4>
+            </div>
+          </div>
+          <p class="case-promise">Un'unica piattaforma per pianificare, monitorare e decidere — invece di rincorrere fogli Excel sparsi tra reparti.</p>
+          <dl class="fact-list fact-list-case">
+            <div class="fact-row"><dt>Contesto</dt><dd>Aziende che devono consolidare dati distribuiti su più reparti — vendite, acquisti, produzione, finance — in un'unica piattaforma di governo.</dd></div>
+            <div class="fact-row"><dt>Obiettivo</dt><dd>Dare a management e controllo di gestione una visione tempestiva e affidabile delle performance.</dd></div>
+            <div class="fact-row"><dt>Attività</dt><dd>Sviluppo su Board di modelli di budget, forecast e business plan; reportistica manageriale; dashboard e KPI personalizzati.</dd></div>
+            <div class="fact-row"><dt>Strumenti</dt><dd>Board, SQL, modellazione dati.</dd></div>
+            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Integrare fonti dati eterogenee mantenendo coerenza tra pianificazione e consuntivo.</dd></div>
+            <div class="fact-row"><dt>Risultato</dt><dd>Un sistema di pianificazione e controllo unico, aggiornabile e condiviso tra le funzioni aziendali.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case-card case-card-featured">
+          <div class="case-card-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 15l6-6"/><path d="M8 13a4 4 0 0 1 0-5.7l1.5-1.5a4 4 0 0 1 5.7 5.7"/><path d="M16 11a4 4 0 0 1 0 5.7l-1.5 1.5a4 4 0 0 1-5.7-5.7"/></svg>
+            <div>
+              <p class="case-tag"><span class="case-tag-num">Ambito 02</span> <span class="case-badge">Focus strategico</span></p>
+              <h4>Sviluppo applicativo per l'industria di processo</h4>
+            </div>
+          </div>
+          <p class="case-promise">La logica di progettazione di un impianto e la sua valutazione economica, finalmente nello stesso strumento.</p>
+          <dl class="fact-list fact-list-case">
+            <div class="fact-row"><dt>Contesto</dt><dd>Aziende industriali che gestiscono su fogli di calcolo separati sia la progettazione tecnica di impianto sia la sua valutazione economica.</dd></div>
+            <div class="fact-row"><dt>Obiettivo</dt><dd>Portare in un'unica applicazione la logica di calcolo ingegneristico e quella di gestione aziendale.</dd></div>
+            <div class="fact-row"><dt>Attività</dt><dd>Analisi delle strutture di calcolo del cliente; sviluppo di applicazioni che integrano i passaggi di progettazione di processo con la stima dei costi e il flusso aziendale.</dd></div>
+            <div class="fact-row"><dt>Strumenti</dt><dd>Programmazione custom, logica di processo, principi di costing impiantistico.</dd></div>
+            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Tradurre in software una logica di calcolo nata per essere usata da un singolo ingegnere, rendendola affidabile e replicabile.</dd></div>
+            <div class="fact-row"><dt>Risultato</dt><dd>Strumenti su misura che uniscono competenza impiantistica e governo del processo aziendale — l'ambito in cui investo maggiormente per il futuro.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case-card">
+          <div class="case-card-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7l-3.5 9.5A3 3 0 0 0 7.3 21h9.4a3 3 0 0 0 2.8-4.5L16 7"/></svg>
+            <div>
+              <p class="case-tag"><span class="case-tag-num">Ambito 03</span></p>
+              <h4>Consulenza di ingegneria chimica e di processo</h4>
+            </div>
+          </div>
+          <p class="case-promise">Studi di processo e documentazione tecnica solidi, a supporto della progettazione e dell'offerta commerciale.</p>
+          <dl class="fact-list fact-list-case">
+            <div class="fact-row"><dt>Contesto</dt><dd>Aziende impiantistiche, come quella attualmente seguita nel settore dell'abbattimento degli inquinanti atmosferici — filtri, scrubber a umido e a secco, RTO.</dd></div>
+            <div class="fact-row"><dt>Obiettivo</dt><dd>Supportare la progettazione di processo e la documentazione tecnica necessaria allo sviluppo dell'impianto.</dd></div>
+            <div class="fact-row"><dt>Attività</dt><dd>Studi di processo tramite simulazione (DWSIM, Aspen Plus); realizzazione di P&amp;ID, PFD e specifiche tecniche.</dd></div>
+            <div class="fact-row"><dt>Strumenti</dt><dd>DWSIM, Aspen Plus, AutoCAD.</dd></div>
+            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Garantire coerenza tra il dato di simulazione e i vincoli reali di impianto, in tempi compatibili con l'offerta commerciale.</dd></div>
+            <div class="fact-row"><dt>Risultato</dt><dd>Documentazione di processo solida, a supporto sia della progettazione che della parte commerciale del cliente.</dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 — CON CHI LAVORO ============ -->
+  <section id="clienti" class="section clienti-section">
+    <div class="section-inner">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span class="eyebrow-num">03</span> Con chi lavoro</p>
+        <h2>Collaborazioni stabili, non un portfolio diffuso</h2>
+        <p class="section-lead">
+          La mia attività è organizzata attorno a due collaborazioni stabili, anziché a un portfolio ampio di
+          clienti diretti: una scelta che mi permette di seguire ogni progetto con continuità e profondità.
+        </p>
+      </header>
+
+      <div class="client-grid reveal">
+
+        <article class="client-card">
+          <div class="client-card-top">
+            <span class="client-mark">VSP</span>
+            <div>
+              <h4>
+                <a href="https://www.vspconsulting.it/" target="_blank" rel="noopener" class="client-name-link">VSP Consulting</a>
+              </h4>
+              <p class="client-sector">Consulenza informatica — Business Intelligence &amp; Corporate Performance Management</p>
+            </div>
+          </div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Collaborazione</dt><dd>Consulente, partner ufficiale Board</dd></div>
+            <div class="fact-row"><dt>Durata</dt><dd>Dal 2026 — in corso</dd></div>
+            <div class="fact-row"><dt>Attività</dt><dd>Sviluppo di soluzioni di pianificazione (budget, forecast, business plan), business analysis (reporting, KPI, dashboard) e analisi predittiva sulla piattaforma Board.</dd></div>
+          </dl>
+        </article>
+
+        <article class="client-card">
+          <div class="client-card-top">
+            <span class="client-mark client-mark-alt">EN</span>
+            <div>
+              <h4>Cliente del settore ambientale</h4>
+              <p class="client-sector">Impianti per l'abbattimento degli inquinanti atmosferici — filtri, scrubber a umido e a secco, RTO</p>
+            </div>
+          </div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Collaborazione</dt><dd>Consulenza di ingegneria di processo</dd></div>
+            <div class="fact-row"><dt>Durata</dt><dd>Collaborazione consolidata, su base ricorrente</dd></div>
+            <div class="fact-row"><dt>Attività</dt><dd>Studi di processo, simulazioni e documentazione tecnica (P&amp;ID, PFD, specifiche) a supporto della progettazione di impianto.</dd></div>
+          </dl>
+          <p class="client-note">Nome omesso su richiesta del cliente, per riservatezza.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 — FORMAZIONE ED ESPERIENZE ============ -->
   <section id="studi" class="section studi-section">
     <div class="section-inner">
       <header class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">02</span> Percorso di studi</p>
-        <h2>Formazione tecnica e competenze maturate</h2>
+        <p class="eyebrow"><span class="eyebrow-num">04</span> Formazione ed esperienze</p>
+        <h2>Il percorso formativo e le esperienze sul campo</h2>
         <p class="section-lead">
           Una formazione ingegneristica solida, integrata nel tempo con percorsi specifici in analisi dei dati
           e con un aggiornamento continuo sugli strumenti che uso ogni giorno.
@@ -284,92 +472,8 @@
         </article>
 
       </div>
-    </div>
-  </section>
 
-  <!-- ============ PERCORSO LAVORATIVO ============ -->
-  <section id="lavoro" class="section lavoro-section">
-    <div class="section-inner">
-      <header class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">03</span> Percorso lavorativo</p>
-        <h2>Dal campo impiantistico alla consulenza digitale</h2>
-        <p class="section-lead">
-          Quasi un decennio di ingegneria di processo, oggi applicato alla consulenza informatica: due linguaggi
-          diversi, lo stesso metodo.
-        </p>
-      </header>
-
-      <h3 class="subhead reveal">Ambiti di consulenza</h3>
-      <p class="prose reveal">
-        Da gennaio 2026 lavoro con partita IVA, dividendo l'attività tra la consulenza informatica per VSP
-        Consulting — Business Intelligence, Corporate Performance Management e sviluppo applicativo — e una
-        collaborazione più contenuta nel settore degli impianti per l'abbattimento degli inquinanti atmosferici.
-        Di seguito, le tipologie di intervento più frequenti, descritte nella loro struttura tipica: i casi
-        studio con risultati specifici verranno pubblicati con il consenso dei singoli clienti.
-      </p>
-
-      <div class="case-grid reveal">
-
-        <article class="case-card">
-          <div class="case-card-head">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 9.5h17M9.5 9.5V21"/></svg>
-            <div>
-              <p class="case-tag"><span class="case-tag-num">Ambito 01</span></p>
-              <h4>BI, pianificazione e controllo di gestione</h4>
-            </div>
-          </div>
-          <p class="case-promise">Un'unica piattaforma per pianificare, monitorare e decidere — invece di rincorrere fogli Excel sparsi tra reparti.</p>
-          <dl class="fact-list fact-list-case">
-            <div class="fact-row"><dt>Contesto</dt><dd>Aziende che devono consolidare dati distribuiti su più reparti — vendite, acquisti, produzione, finance — in un'unica piattaforma di governo.</dd></div>
-            <div class="fact-row"><dt>Obiettivo</dt><dd>Dare a management e controllo di gestione una visione tempestiva e affidabile delle performance.</dd></div>
-            <div class="fact-row"><dt>Attività</dt><dd>Sviluppo su Board di modelli di budget, forecast e business plan; reportistica manageriale; dashboard e KPI personalizzati.</dd></div>
-            <div class="fact-row"><dt>Strumenti</dt><dd>Board, SQL, modellazione dati.</dd></div>
-            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Integrare fonti dati eterogenee mantenendo coerenza tra pianificazione e consuntivo.</dd></div>
-            <div class="fact-row"><dt>Risultato</dt><dd>Un sistema di pianificazione e controllo unico, aggiornabile e condiviso tra le funzioni aziendali.</dd></div>
-          </dl>
-        </article>
-
-        <article class="case-card case-card-featured">
-          <div class="case-card-head">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 15l6-6"/><path d="M8 13a4 4 0 0 1 0-5.7l1.5-1.5a4 4 0 0 1 5.7 5.7"/><path d="M16 11a4 4 0 0 1 0 5.7l-1.5 1.5a4 4 0 0 1-5.7-5.7"/></svg>
-            <div>
-              <p class="case-tag"><span class="case-tag-num">Ambito 02</span> <span class="case-badge">Focus strategico</span></p>
-              <h4>Sviluppo applicativo per l'industria di processo</h4>
-            </div>
-          </div>
-          <p class="case-promise">La logica di progettazione di un impianto e la sua valutazione economica, finalmente nello stesso strumento.</p>
-          <dl class="fact-list fact-list-case">
-            <div class="fact-row"><dt>Contesto</dt><dd>Aziende industriali che gestiscono su fogli di calcolo separati sia la progettazione tecnica di impianto sia la sua valutazione economica.</dd></div>
-            <div class="fact-row"><dt>Obiettivo</dt><dd>Portare in un'unica applicazione la logica di calcolo ingegneristico e quella di gestione aziendale.</dd></div>
-            <div class="fact-row"><dt>Attività</dt><dd>Analisi delle strutture di calcolo del cliente; sviluppo di applicazioni che integrano i passaggi di progettazione di processo con la stima dei costi e il flusso aziendale.</dd></div>
-            <div class="fact-row"><dt>Strumenti</dt><dd>Programmazione custom, logica di processo, principi di costing impiantistico.</dd></div>
-            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Tradurre in software una logica di calcolo nata per essere usata da un singolo ingegnere, rendendola affidabile e replicabile.</dd></div>
-            <div class="fact-row"><dt>Risultato</dt><dd>Strumenti su misura che uniscono competenza impiantistica e governo del processo aziendale — l'ambito in cui investo maggiormente per il futuro.</dd></div>
-          </dl>
-        </article>
-
-        <article class="case-card">
-          <div class="case-card-head">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l1 4H8l1-4Z"/><path d="M8 7l-3.5 9.5A3 3 0 0 0 7.3 21h9.4a3 3 0 0 0 2.8-4.5L16 7"/></svg>
-            <div>
-              <p class="case-tag"><span class="case-tag-num">Ambito 03</span></p>
-              <h4>Consulenza di ingegneria chimica e di processo</h4>
-            </div>
-          </div>
-          <p class="case-promise">Studi di processo e documentazione tecnica solidi, a supporto della progettazione e dell'offerta commerciale.</p>
-          <dl class="fact-list fact-list-case">
-            <div class="fact-row"><dt>Contesto</dt><dd>Aziende impiantistiche, come quella attualmente seguita nel settore dell'abbattimento degli inquinanti atmosferici — filtri, scrubber a umido e a secco, RTO.</dd></div>
-            <div class="fact-row"><dt>Obiettivo</dt><dd>Supportare la progettazione di processo e la documentazione tecnica necessaria allo sviluppo dell'impianto.</dd></div>
-            <div class="fact-row"><dt>Attività</dt><dd>Studi di processo tramite simulazione (DWSIM, Aspen Plus); realizzazione di P&amp;ID, PFD e specifiche tecniche.</dd></div>
-            <div class="fact-row"><dt>Strumenti</dt><dd>DWSIM, Aspen Plus, AutoCAD.</dd></div>
-            <div class="fact-row"><dt>Sfide tipiche</dt><dd>Garantire coerenza tra il dato di simulazione e i vincoli reali di impianto, in tempi compatibili con l'offerta commerciale.</dd></div>
-            <div class="fact-row"><dt>Risultato</dt><dd>Documentazione di processo solida, a supporto sia della progettazione che della parte commerciale del cliente.</dd></div>
-          </dl>
-        </article>
-
-      </div>
-
-      <h3 class="subhead reveal">Esperienza</h3>
+      <h3 class="subhead reveal">Esperienza lavorativa</h3>
       <p class="muted-note reveal">Il percorso sul campo alla base di questo modo di lavorare.</p>
       <div class="timeline reveal">
 
@@ -403,60 +507,23 @@
             combustori: dalla configurazione tecnica alla quotazione dell'offerta.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ CLIENTI ============ -->
-  <section id="clienti" class="section clienti-section">
-    <div class="section-inner">
-      <header class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">04</span> Clienti e collaborazioni</p>
-        <h2>Con chi lavoro</h2>
-        <p class="section-lead">
-          La mia attività è organizzata attorno a due collaborazioni stabili, anziché a un portfolio ampio di
-          clienti diretti: una scelta che mi permette di seguire ogni progetto con continuità.
-        </p>
-      </header>
-
-      <div class="client-grid reveal">
-
-        <article class="client-card">
-          <div class="client-card-top">
-            <span class="client-mark">VSP</span>
-            <div>
-              <h4>VSP Consulting</h4>
-              <p class="client-sector">Consulenza informatica — Business Intelligence &amp; Corporate Performance Management</p>
-            </div>
-          </div>
-          <dl class="fact-list">
-            <div class="fact-row"><dt>Collaborazione</dt><dd>Consulente, partner ufficiale Board</dd></div>
-            <div class="fact-row"><dt>Durata</dt><dd>Dal 2026 — in corso</dd></div>
-            <div class="fact-row"><dt>Attività</dt><dd>Sviluppo di soluzioni di pianificazione (budget, forecast, business plan), business analysis (reporting, KPI, dashboard) e analisi predittiva sulla piattaforma Board.</dd></div>
-          </dl>
-        </article>
-
-        <article class="client-card">
-          <div class="client-card-top">
-            <span class="client-mark client-mark-alt">EN</span>
-            <div>
-              <h4>Cliente del settore ambientale</h4>
-              <p class="client-sector">Impianti per l'abbattimento degli inquinanti atmosferici — filtri, scrubber a umido e a secco, RTO</p>
-            </div>
-          </div>
-          <dl class="fact-list">
-            <div class="fact-row"><dt>Collaborazione</dt><dd>Consulenza di ingegneria di processo</dd></div>
-            <div class="fact-row"><dt>Durata</dt><dd>Collaborazione consolidata, su base ricorrente</dd></div>
-            <div class="fact-row"><dt>Attività</dt><dd>Studi di processo, simulazioni e documentazione tecnica (P&amp;ID, PFD, specifiche) a supporto della progettazione di impianto.</dd></div>
-          </dl>
-          <p class="client-note">Nome omesso su richiesta del cliente, per riservatezza.</p>
-        </article>
+        <div class="timeline-item">
+          <span class="tag-mono">2026 — in corso</span>
+          <h4>Libero professionista — Consulenza BI &amp; Ingegneria di processo</h4>
+          <p>
+            Attività di consulenza informatica in ambito Business Intelligence e Corporate Performance Management
+            in collaborazione con <a href="https://www.vspconsulting.it/" target="_blank" rel="noopener" class="inline-link">VSP Consulting</a>,
+            affiancata a una collaborazione continuativa di ingegneria di processo nel settore degli impianti per
+            l'abbattimento degli inquinanti atmosferici.
+          </p>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTATTI ============ -->
+  <!-- ============ 05 — CONTATTI ============ -->
   <section id="contatti" class="section contatti-section">
     <div class="section-inner">
       <header class="section-head reveal">
@@ -470,7 +537,21 @@
 
       <div class="two-col reveal">
         <div class="col-main">
-          <form id="contact-form" class="contact-form" novalidate>
+          <!--
+            FORMSPREE: sostituire YOUR_FORM_ID con l'ID ottenuto su formspree.io
+            1. Registrarsi su https://formspree.io
+            2. Creare un nuovo form e copiare l'ID (es. xpwzabcd)
+            3. Sostituire YOUR_FORM_ID nell'attributo data-action qui sotto
+          -->
+          <form
+            id="contact-form"
+            class="contact-form"
+            data-action="https://formspree.io/f/xojzgqav"
+            novalidate
+          >
+            <!-- Honeypot anti-spam Formspree -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
             <div class="form-row form-row-2col">
               <div class="form-field">
                 <label for="cf-nome">Nome</label>
@@ -496,13 +577,15 @@
               <textarea id="cf-messaggio" name="messaggio" rows="4" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">
               Invia messaggio
               <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
+
+            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+
             <p class="form-note">
-              Il modulo apre il tuo programma di posta con il messaggio già pronto, indirizzato a
-              davide.vicenzi.1994@gmail.com.
+              I tuoi dati sono usati esclusivamente per risponderti.
             </p>
           </form>
         </div>
@@ -534,11 +617,13 @@
 
 <footer class="site-footer">
   <div class="section-inner footer-inner">
-    <span>© 2026 Davide Vicenzi</span>
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
     <a href="#home">Torna su ↑</a>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
 </body>
 </html>

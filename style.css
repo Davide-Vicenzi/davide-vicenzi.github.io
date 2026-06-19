@@ -94,6 +94,25 @@ ul{margin:0; padding:0;}
 
 :focus-visible{outline:2px solid var(--primary); outline-offset:3px;}
 
+/* ============ INLINE LINK (testo corpo) ============ */
+.inline-link{
+  color:var(--primary);
+  text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  transition:border-color .2s;
+}
+.inline-link:hover{border-color:var(--primary);}
+[data-theme="dark"] .inline-link{color:var(--primary-strong);}
+
+/* ============ CLIENT NAME LINK ============ */
+.client-name-link{
+  text-decoration:none;
+  color:inherit;
+  border-bottom:1px solid var(--line);
+  transition:border-color .2s, color .2s;
+}
+.client-name-link:hover{color:var(--primary); border-color:var(--primary);}
+
 /* ============ LAYOUT HELPERS ============ */
 .section-inner{
   max-width:var(--maxw);
@@ -160,6 +179,11 @@ ul{margin:0; padding:0;}
   height:66px;
   display:flex; align-items:center; justify-content:space-between;
 }
+
+/* Logo + nav-avatar pill */
+.logo-area{
+  display:flex; align-items:center; gap:.55rem;
+}
 .logo{
   font-family:var(--font-mono);
   font-weight:500;
@@ -168,6 +192,36 @@ ul{margin:0; padding:0;}
   letter-spacing:.02em;
 }
 .logo-dot{color:var(--accent);}
+
+/* Avatar miniatura nella nav (nascosto di default, appare dopo hero) */
+.nav-avatar{
+  width:30px; height:30px;
+  border-radius:50%;
+  background:var(--surface-alt);
+  border:1.5px solid var(--line);
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+  opacity:0;
+  transform:scale(0.6);
+  transition:opacity .35s ease, transform .35s ease;
+  pointer-events:none;
+}
+.nav-avatar.is-visible{
+  opacity:1;
+  transform:scale(1);
+  pointer-events:auto;
+}
+.nav-avatar img{
+  width:100%; height:100%; object-fit:cover;
+}
+.nav-avatar-initials{
+  font-family:var(--font-mono);
+  font-size:.6rem;
+  font-weight:500;
+  color:var(--ink-muted);
+  letter-spacing:.04em;
+}
 
 .main-nav{display:flex; gap:1.9rem;}
 .main-nav a{
@@ -185,6 +239,13 @@ ul{margin:0; padding:0;}
 }
 
 .nav-actions{display:flex; align-items:center; gap:.4rem;}
+
+/* Bottone "Contattami" nella nav (visibile su desktop, hidden su mobile < 680) */
+.btn-nav-cta{
+  font-size:.82rem;
+  padding:.55em 1em;
+}
+
 .icon-btn{
   background:none; border:none; cursor:pointer;
   width:38px; height:38px;
@@ -219,6 +280,7 @@ ul{margin:0; padding:0;}
 .btn-primary:hover{background:var(--primary-strong); color:var(--btn-primary-text);}
 .btn-outline{border-color:var(--ink); color:var(--ink);}
 .btn-outline:hover{background:var(--surface-alt);}
+.btn-sm{padding:.5em 1em; font-size:.86rem;}
 .icon-arrow{width:16px; height:16px;}
 
 /* ============ HERO ============ */
@@ -240,6 +302,42 @@ ul{margin:0; padding:0;}
 .hero-lead{font-size:1.15rem; color:var(--ink-muted); max-width:36em; margin:1.3rem 0 2.2rem;}
 .hero-cta{display:flex; gap:1rem; flex-wrap:wrap;}
 
+/* Avatar placeholder nella Hero */
+.hero-avatar-wrap{
+  margin-bottom:1.6rem;
+}
+.hero-avatar{
+  width:120px; height:120px;
+  border-radius:50%;
+  background:var(--surface);
+  border:2px dashed var(--line);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:.2em;
+  overflow:hidden;
+  position:relative;
+}
+.hero-avatar img{
+  width:100%; height:100%; object-fit:cover;
+  position:absolute; inset:0;
+}
+.hero-avatar-initials{
+  font-family:var(--font-display);
+  font-size:2.1rem;
+  font-weight:500;
+  color:var(--primary);
+  opacity:.35;
+  line-height:1;
+}
+.hero-avatar-hint{
+  font-family:var(--font-mono);
+  font-size:.55rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--ink-muted);
+  opacity:.5;
+}
+
 .hero-diagram{display:flex; justify-content:center;}
 .diagram-svg{width:100%; max-width:340px;}
 .diagram-lines path{
@@ -250,11 +348,7 @@ ul{margin:0; padding:0;}
   fill:none; stroke:var(--accent); stroke-width:1.4; opacity:.65;
 }
 
-/* ============ INGRESSO HERO ============
-   Il contenuto è SEMPRE visibile di default (nessuna dipendenza da JS).
-   Una piccola animazione di ingresso, puramente CSS, anima solo la hero
-   al caricamento; tutto il resto della pagina non dipende da scroll/JS
-   per essere visibile, per massima robustezza. */
+/* ============ INGRESSO HERO ============ */
 .reveal{opacity:1; transform:none;}
 
 @media (prefers-reduced-motion:no-preference){
@@ -340,7 +434,7 @@ ul{margin:0; padding:0;}
   padding-top:.8em;
 }
 
-/* ============ LAVORO: TIMELINE ============ */
+/* ============ TIMELINE ============ */
 .timeline{
   position:relative;
   padding-left:2.2rem;
@@ -360,7 +454,7 @@ ul{margin:0; padding:0;}
 .timeline-item h4{font-size:1.03rem;}
 .timeline-item p{color:var(--ink-muted); max-width:42em; font-size:.96rem;}
 
-/* ============ LAVORO: CASE CARDS ============ */
+/* ============ AREE CONSULENZIALI: CASE CARDS ============ */
 .case-grid{display:grid; gap:1.6rem;}
 .case-card{
   background:var(--surface);
@@ -390,7 +484,7 @@ ul{margin:0; padding:0;}
 .fact-list dd a{color:var(--primary); text-decoration:none; border-bottom:1px solid var(--line);}
 .fact-list dd a:hover{border-color:var(--primary);}
 
-/* ============ CLIENTI ============ */
+/* ============ CON CHI LAVORO: CLIENT CARDS ============ */
 .client-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
 .client-card{
   background:var(--surface);
@@ -411,7 +505,7 @@ ul{margin:0; padding:0;}
 .client-sector{font-size:.9rem; color:var(--ink-muted); margin:0;}
 .client-note{font-size:.85rem; color:var(--ink-muted); font-style:italic; margin:1em 0 0;}
 
-/* ============ CONTATTI: MODULO ============ */
+/* ============ CONTATTI: MODULO FORMSPREE ============ */
 .contact-form{display:flex; flex-direction:column; gap:1.1rem; max-width:38em;}
 .form-row-2col{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;}
 .form-field{display:flex; flex-direction:column; gap:.4em;}
@@ -428,7 +522,33 @@ ul{margin:0; padding:0;}
   outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary);
 }
 .contact-form .btn{align-self:flex-start; margin-top:.3rem;}
+.contact-form .btn:disabled{opacity:.55; cursor:not-allowed; transform:none;}
 .form-note{font-size:.85rem; color:var(--ink-muted); margin:.6rem 0 0; max-width:34em;}
+
+/* Feedback invio form */
+.form-feedback{
+  font-size:.92rem;
+  padding:.7em 1em;
+  border-radius:var(--radius);
+  display:none;
+}
+.form-feedback.success{
+  display:block;
+  background:var(--primary-tint);
+  color:var(--primary-strong);
+  border:1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+}
+.form-feedback.error{
+  display:block;
+  background:#FFF0F0;
+  color:#8B2020;
+  border:1px solid #F5C6C6;
+}
+[data-theme="dark"] .form-feedback.error{
+  background:#2C1010;
+  color:#F5A0A0;
+  border-color:#5C2020;
+}
 
 /* ============ FOOTER ============ */
 .site-footer{border-top:1px solid var(--line); padding:2.2rem 0;}
@@ -451,6 +571,9 @@ ul{margin:0; padding:0;}
 }
 
 @media (max-width:680px){
+  /* Nascondi il bottone "Contattami" nella nav su mobile (c'è già nel menu) */
+  .btn-nav-cta{display:none;}
+
   .main-nav{
     position:absolute; top:66px; left:0; right:0;
     background:var(--bg);
@@ -459,13 +582,25 @@ ul{margin:0; padding:0;}
     max-height:0; overflow:hidden;
     transition:max-height .3s ease;
   }
-  .main-nav.is-open{max-height:380px;}
+  .main-nav.is-open{max-height:440px;}
   .main-nav a{padding:1em 1.6rem; border-bottom:1px solid var(--line); width:100%;}
+
+  /* Link "Contatti" evidenziato nel menu mobile */
+  .main-nav a[href="#contatti"]{
+    color:var(--primary);
+    font-weight:500;
+  }
+  [data-theme="dark"] .main-nav a[href="#contatti"]{
+    color:var(--primary-strong);
+  }
+
   .nav-toggle{display:flex;}
   .nav-toggle .icon{width:21px; height:21px;}
 
   .section{padding:4.5rem 0;}
   .hero{padding:8rem 0 3.5rem; min-height:auto;}
+  .hero-avatar{width:96px; height:96px;}
+  .hero-avatar-initials{font-size:1.7rem;}
   .edu-grid{grid-template-columns:1fr;}
   .cert-grid{grid-template-columns:1fr;}
   .fact-row{grid-template-columns:1fr; gap:.2em;}

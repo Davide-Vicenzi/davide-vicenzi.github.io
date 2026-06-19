@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="3" fill="#0E3F35"/>
+  <text x="3" y="22" font-family="'IBM Plex Mono', 'Courier New', monospace"
+        font-size="14" font-weight="600" fill="#EAF0EA" letter-spacing="-0.5">DV</text>
+  <circle cx="29.5" cy="26" r="2.2" fill="#B4823C"/>
+</svg>
