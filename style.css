@@ -309,33 +309,13 @@ ul{margin:0; padding:0;}
 .hero-avatar{
   width:120px; height:120px;
   border-radius:50%;
-  background:var(--surface);
-  border:2px dashed var(--line);
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  gap:.2em;
   overflow:hidden;
   position:relative;
+  box-shadow:0 0 0 3px var(--surface), 0 0 0 5px var(--line);
 }
 .hero-avatar img{
   width:100%; height:100%; object-fit:cover;
-  position:absolute; inset:0;
-}
-.hero-avatar-initials{
-  font-family:var(--font-display);
-  font-size:2.1rem;
-  font-weight:500;
-  color:var(--primary);
-  opacity:.35;
-  line-height:1;
-}
-.hero-avatar-hint{
-  font-family:var(--font-mono);
-  font-size:.55rem;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  color:var(--ink-muted);
-  opacity:.5;
+  object-position:center top;
 }
 
 .hero-diagram{display:flex; justify-content:center;}
