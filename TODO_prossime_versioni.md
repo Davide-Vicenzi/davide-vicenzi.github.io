@@ -13,17 +13,20 @@
 - [x] Ingegneria di processo ridotta a background: rimossi Ambito 03 e card del cliente ambientale,
       timeline 2018–2025 compattata in una voce, certificazioni Aspen e CAD fuse in una card
 - [x] Sezione "Con chi lavoro" eliminata: la card VSP Consulting è ora nella sezione Board
-- [x] Nuova sezione "Software & App" in home (4 progetti, 2 famiglie: Budget Planner,
-      Vesta, AbatiX, Piping). FMA escluso: troppo specifico, potrà confluire in AbatiX
+- [x] Nuova sezione "Software & App" in home (3 progetti: Budget Planner, Vesta,
+      Piping). FMA escluso: troppo specifico, potrà confluire in AbatiX. AbatiX nascosto in attesa
+      di conferma
 - [x] Pagine progetto in `software/` + `software/_template.html` per i progetti futuri
 - [x] Nuova immagine `og-image.png` (1200×630) con il nuovo posizionamento
 - [x] `sitemap.xml` con le pagine progetto
 
 ### Prima di pubblicare
 - [ ] Rileggere tutti i testi riscritti (home e pagine progetto): sono proposte
-- [ ] Screenshot reali in `assets/software/<slug>/` al posto dei segnaposto "Screenshot in arrivo"
-      (oppure rimuovere la sezione Screenshot dalle pagine che non ne hanno ancora)
-- [ ] AbatiX: confermare che può essere mostrato e offerto in demo
+- [ ] Screenshot: la sezione è stata tolta dalle pagine progetto. Quando ci sono immagini reali,
+      ricopiarla da `software/_template.html` e mettere i file in `assets/software/<slug>/`
+- [ ] AbatiX: nascosto dal sito. Se confermato, ripristinare la pagina con
+      `git checkout 6a81842 -- software/abatix.html`, poi riaggiungere la card in home e la voce
+      in `sitemap.xml`
 - [ ] Vesta: confermare il nome definitivo
 - [ ] Budget Planner: decidere se la card dirà "Scarica" o "Richiedi licenza"
 - [ ] Aggiornare `lastmod` in `sitemap.xml` alla data di pubblicazione
