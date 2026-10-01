@@ -464,8 +464,7 @@ ul{margin:0; padding:0;}
 .fact-list dd a{color:var(--primary); text-decoration:none; border-bottom:1px solid var(--line);}
 .fact-list dd a:hover{border-color:var(--primary);}
 
-/* ============ CON CHI LAVORO: CLIENT CARDS ============ */
-.client-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+/* ============ COLLABORAZIONE: CLIENT CARD ============ */
 .client-card{
   background:var(--surface);
   border:1px solid var(--line);
@@ -481,9 +480,168 @@ ul{margin:0; padding:0;}
   border-radius:var(--radius);
 }
 [data-theme="dark"] .client-mark{color:var(--primary-strong);}
-.client-mark-alt{background:var(--surface-alt); color:var(--ink-muted);}
 .client-sector{font-size:.9rem; color:var(--ink-muted); margin:0;}
-.client-note{font-size:.85rem; color:var(--ink-muted); font-style:italic; margin:1em 0 0;}
+
+/* ============ SOFTWARE & APP: PROJECT CARDS ============ */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.4rem;
+}
+.project-card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1.7rem;
+  display:flex; flex-direction:column;
+}
+.project-card-head{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:1em;
+  margin-bottom:1.1rem;
+}
+.project-icon{
+  background:var(--primary-tint); color:var(--primary-strong);
+  width:46px; height:46px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:var(--radius);
+}
+.project-icon .icon{width:22px; height:22px;}
+.project-card h4{font-size:1.2rem;}
+.project-card h4 a{text-decoration:none;}
+.project-card h4 a:hover{color:var(--primary);}
+[data-theme="dark"] .project-card h4 a:hover{color:var(--primary-strong);}
+.project-promise{font-size:.95rem; color:var(--ink-muted); margin:0 0 1.1rem;}
+.project-actions{
+  margin-top:auto;
+  display:flex; align-items:center; justify-content:space-between; gap:.8rem 1rem; flex-wrap:wrap;
+  padding-top:1.1rem;
+  border-top:1px solid var(--line);
+}
+
+.platform-tags{display:flex; flex-wrap:wrap; gap:.4em; list-style:none; margin:0 0 1.3rem;}
+.platform-tag{
+  font-family:var(--font-mono); font-size:.7rem; text-transform:uppercase; letter-spacing:.05em;
+  color:var(--ink-muted);
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:.2em .55em;
+}
+
+/* Stato del progetto: status-dev (default) · status-demo · status-available */
+.status-badge{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-family:var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em;
+  white-space:nowrap;
+  color:var(--ink-muted); background:var(--surface-alt);
+  border:1px solid var(--line); border-radius:999px;
+  padding:.25em .7em;
+}
+.status-badge::before{
+  content:''; width:6px; height:6px; border-radius:50%;
+  background:currentColor;
+}
+.status-demo{
+  color:var(--ink); background:transparent;
+  border-color:color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.status-demo::before{background:var(--accent);}
+.status-available{
+  color:var(--primary-strong); background:var(--primary-tint);
+  border-color:color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.text-link{
+  display:inline-flex; align-items:center; gap:.4em;
+  font-size:.88rem; font-weight:500;
+  color:var(--primary); text-decoration:none;
+}
+.text-link:hover{text-decoration:underline; text-underline-offset:3px;}
+[data-theme="dark"] .text-link{color:var(--primary-strong);}
+
+/* ============ PAGINE PROGETTO (software/*.html) ============ */
+.page-hero{padding:8.5rem 0 3rem;}
+.page-hero h1{font-size:clamp(2.1rem,5vw,3.3rem);}
+.page-hero-meta{display:flex; align-items:center; flex-wrap:wrap; gap:.6em; margin-bottom:1.2rem;}
+.page-hero-meta .platform-tags{margin:0;}
+.page-lead{font-size:1.15rem; color:var(--ink-muted); max-width:38em; margin:1rem 0 2rem;}
+
+.breadcrumb{
+  display:flex; align-items:center; gap:.6em;
+  font-family:var(--font-mono); font-size:.78rem; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--ink-muted);
+  margin-bottom:1.6rem;
+}
+.breadcrumb a{color:var(--primary); text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline; text-underline-offset:3px;}
+[data-theme="dark"] .breadcrumb a{color:var(--primary-strong);}
+
+.section-tight{padding:3rem 0;}
+.section-tight:last-of-type{padding-bottom:6rem;}
+.section-tight h3.subhead:first-child{margin-top:0;}
+
+.feature-list{list-style:none; max-width:42em;}
+.feature-list li{
+  position:relative;
+  padding:.7em 0 .7em 1.5em;
+  border-bottom:1px solid var(--line);
+  font-size:.98rem;
+}
+.feature-list li:last-child{border-bottom:none;}
+.feature-list li::before{
+  content:'';
+  position:absolute; left:0; top:1.25em;
+  width:7px; height:7px;
+  border:1.5px solid var(--accent);
+}
+.feature-list strong{font-weight:600;}
+
+.shot-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.4rem;}
+.shot{
+  aspect-ratio:16/10;
+  margin:0;
+  background:var(--surface-alt);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.shot img{width:100%; height:100%; object-fit:cover;}
+.shot-grid-phone{grid-template-columns:repeat(4,1fr);}
+.shot-grid-phone .shot{aspect-ratio:9/16;}
+.shot-placeholder{
+  border-style:dashed;
+  font-family:var(--font-mono); font-size:.74rem; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--ink-muted); text-align:center; padding:1em;
+}
+
+.install-steps{list-style:none; counter-reset:step; max-width:42em; margin:0; padding:0;}
+.install-steps li{
+  counter-increment:step;
+  position:relative;
+  padding:0 0 1.3rem 3rem;
+  font-size:.98rem;
+}
+.install-steps li:last-child{padding-bottom:0;}
+.install-steps li::before{
+  content:counter(step, decimal-leading-zero);
+  position:absolute; left:0; top:.15em;
+  font-family:var(--font-mono); font-size:.78rem; letter-spacing:.04em;
+  color:var(--accent);
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:.15em .5em;
+}
+
+.page-note{color:var(--ink-muted); font-size:.92rem; max-width:42em; margin:1.2rem 0 0;}
+h2 + .page-note{margin:0 0 1.6rem;}
+
+.page-cta{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:2rem;
+  display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;
+}
+.page-cta h2{font-size:1.35rem; margin-bottom:.3em;}
+.page-cta p{color:var(--ink-muted); margin:0; max-width:36em;}
 
 /* ============ CONTATTI: MODULO FORMSPREE ============ */
 .contact-form{display:flex; flex-direction:column; gap:1.1rem; max-width:38em;}
@@ -547,7 +705,8 @@ ul{margin:0; padding:0;}
   .hero-grid{grid-template-columns:1fr;}
   .hero-diagram{order:-1; max-width:220px; margin:0 auto 1rem;}
   .cert-grid{grid-template-columns:1fr 1fr;}
-  .client-grid{grid-template-columns:1fr;}
+  .shot-grid{grid-template-columns:1fr 1fr;}
+  .shot-grid-phone{grid-template-columns:repeat(3,1fr);}
 }
 
 @media (max-width:680px){
@@ -565,12 +724,12 @@ ul{margin:0; padding:0;}
   .main-nav.is-open{max-height:440px;}
   .main-nav a{padding:1em 1.6rem; border-bottom:1px solid var(--line); width:100%;}
 
-  /* Link "Contatti" evidenziato nel menu mobile */
-  .main-nav a[href="#contatti"]{
+  /* Link "Contatti" evidenziato nel menu mobile (href="#contatti" in home, "/#contatti" nelle pagine progetto) */
+  .main-nav a[href$="#contatti"]{
     color:var(--primary);
     font-weight:500;
   }
-  [data-theme="dark"] .main-nav a[href="#contatti"]{
+  [data-theme="dark"] .main-nav a[href$="#contatti"]{
     color:var(--primary-strong);
   }
 
@@ -586,5 +745,11 @@ ul{margin:0; padding:0;}
   .fact-row{grid-template-columns:1fr; gap:.2em;}
   .fact-list-case .fact-row{grid-template-columns:1fr;}
   .form-row-2col{grid-template-columns:1fr;}
+  .page-hero{padding:7rem 0 2rem;}
+  .section-tight{padding:2.2rem 0;}
+  .section-tight:last-of-type{padding-bottom:4rem;}
+  .shot-grid{grid-template-columns:1fr;}
+  .shot-grid-phone{grid-template-columns:1fr 1fr;}
+  .page-cta{padding:1.5rem;}
   .footer-inner{flex-direction:column; gap:.6rem; text-align:center;}
 }
