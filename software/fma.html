@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMA — Software di Davide Vicenzi</title>
+<meta name="description" content="FMA: applicazione web per il dimensionamento di filtri a maniche, con archivio di clienti, progetti e versioni del filtro e scheda tecnica.">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/fma.html">
+<meta property="og:title"       content="FMA — Software di Davide Vicenzi">
+<meta property="og:description" content="FMA: applicazione web per il dimensionamento di filtri a maniche, con archivio di clienti, progetti e versioni del filtro e scheda tecnica.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/fma.html">
+<meta name="author" content="Davide Vicenzi">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTESTAZIONE ============ -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>FMA</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-demo">Su richiesta</span>
+        <ul class="platform-tags">
+          <li class="platform-tag">Web app</li>
+        </ul>
+      </div>
+
+      <h1>FMA</h1>
+      <p class="page-lead">Un'applicazione web per il dimensionamento di filtri a maniche, pensata per gestire più clienti, più progetti e più versioni dello stesso filtro.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#contatti">
+          Richiedi una demo
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
+  <section class="section section-tight">
+    <div class="section-inner two-col">
+      <div class="col-main">
+        <h2>Cosa fa</h2>
+        <div class="prose">
+          <p>FMA trasforma in applicazione la logica di un foglio di calcolo per il dimensionamento di filtri a maniche autopulenti. Ogni progetto appartiene a un cliente e può avere più versioni del filtro, confrontabili tra loro.</p>
+          <p>L'obiettivo non è replicare il foglio Excel, ma dare al calcolo una struttura ordinata: dati organizzati, revisioni tracciate e una scheda tecnica pronta da consegnare.</p>
+        </div>
+
+        <h3 class="subhead">Funzioni principali</h3>
+        <ul class="feature-list">
+          <li><strong>Archivio</strong> — clienti, progetti e versioni del filtro, con dashboard degli ultimi lavori.</li>
+          <li><strong>Dati di dimensionamento</strong> — condizioni operative, selezione del modello, geometria delle maniche, struttura, materiali e accessori.</li>
+          <li><strong>Circuito aspirante</strong> — dati di sistema, aspiratore centrifugo e bocchette.</li>
+          <li><strong>Verifiche</strong> — velocità di attraversamento e verifiche BAT (Regione Lombardia).</li>
+          <li><strong>Confronto tra revisioni</strong> — con storico delle modifiche di ogni versione.</li>
+          <li><strong>Scheda tecnica</strong> — generata dai dati della versione.</li>
+        </ul>
+      </div>
+
+      <aside class="col-side">
+        <div class="spec-sheet">
+          <div class="spec-sheet-head">Scheda tecnica</div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Piattaforma</dt><dd>Web app, si usa dal browser</dd></div>
+            <div class="fact-row"><dt>Stato</dt><dd>Demo su richiesta</dd></div>
+            <div class="fact-row"><dt>Utenti</dt><dd>Con gestione utenti</dd></div>
+            <div class="fact-row"><dt>Tecnologie</dt><dd>HTML · CSS · JavaScript</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT ============
+       Sostituire ogni segnaposto con:
+         <figure class="shot"><img src="/assets/software/fma/01.png" alt="[Cosa mostra]" loading="lazy" width="1280" height="800"></figure>
+  ======================================== -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Screenshot</h2>
+      <div class="shot-grid">
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALLAZIONE + STATO ============
+       Alla prima release pubblica: sostituire "Stato del progetto" con "Novità"
+       (una riga per versione) e il link alla pagina delle release — vedi software/_template.html.
+  ================================================= -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Come si prova</h2>
+      <p class="page-note">FMA è disponibile in demo: ti mostro l'applicazione su un caso di esempio e valutiamo come adattarla ai tuoi filtri e ai tuoi parametri di calcolo.</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>Vuoi vedere FMA in funzione?</h2>
+          <p>Scrivimi per una demo su un caso di esempio.</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Richiedi una demo
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>

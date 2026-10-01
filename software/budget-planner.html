@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Planner — Software di Davide Vicenzi</title>
+<meta name="description" content="Budget Planner: applicazione desktop per Windows per pianificare il budget personale e familiare da un anno all'altro, con i dati salvati in locale.">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/budget-planner.html">
+<meta property="og:title"       content="Budget Planner — Software di Davide Vicenzi">
+<meta property="og:description" content="Budget Planner: applicazione desktop per Windows per pianificare il budget personale e familiare da un anno all'altro, con i dati salvati in locale.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/budget-planner.html">
+<meta name="author" content="Davide Vicenzi">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTESTAZIONE ============ -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>Budget Planner</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-dev">In sviluppo</span>
+        <ul class="platform-tags">
+          <li class="platform-tag">Windows</li>
+          <li class="platform-tag">Dati in locale</li>
+        </ul>
+      </div>
+
+      <h1>Budget Planner</h1>
+      <p class="page-lead">Un'applicazione desktop per pianificare il budget personale e familiare da un anno all'altro. Non un registro delle spese: uno strumento per decidere prima dove andranno i soldi, e verificare poi com'è andata.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
+  <section class="section section-tight">
+    <div class="section-inner two-col">
+      <div class="col-main">
+        <h2>Cosa fa</h2>
+        <div class="prose">
+          <p>Budget Planner parte dal netto annuale di ogni persona che porta un reddito in famiglia e lo distribuisce tra categorie di spesa, risparmi e finanziamenti. Durante l'anno importa i movimenti dall'estratto conto e confronta quanto pianificato con quanto speso e incassato.</p>
+          <p>I dati restano sul tuo computer: l'applicazione non richiede un account e non usa servizi cloud.</p>
+        </div>
+
+        <h3 class="subhead">Funzioni principali</h3>
+        <ul class="feature-list">
+          <li><strong>Netto annuale per ogni percettore</strong> — lavoro dipendente, regime forfettario o ordinario, con una stima fiscale semplificata per l'Italia e le addizionali comunali.</li>
+          <li><strong>Pianificazione per categorie</strong> — allocazione del budget in euro all'anno o al mese, a partire dallo storico dell'anno precedente.</li>
+          <li><strong>Import dell'estratto conto</strong> — da Excel o CSV, con una classificazione delle spese che impara dalle tue correzioni e scarta i giroconti tra conti propri.</li>
+          <li><strong>Quattro report</strong> — quadro globale, pianificazione, spese ed entrate, con avvisi su budget superati e ritmo di spesa.</li>
+          <li><strong>Spese ricorrenti e finanziamenti</strong> — abbonamenti, utenze e rate riconosciuti in automatico; piano di ammortamento alla francese.</li>
+          <li><strong>Backup ed export</strong> — backup e ripristino dei dati, export in Excel.</li>
+        </ul>
+        <p class="page-note">Le stime fiscali sono semplificate e pensate per la pianificazione personale: non sostituiscono una busta paga, una dichiarazione dei redditi o il parere di un commercialista.</p>
+      </div>
+
+      <aside class="col-side">
+        <div class="spec-sheet">
+          <div class="spec-sheet-head">Scheda tecnica</div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Piattaforma</dt><dd>Windows (applicazione desktop)</dd></div>
+            <div class="fact-row"><dt>Stato</dt><dd>In sviluppo — versione 1.8 in test</dd></div>
+            <div class="fact-row"><dt>Requisiti</dt><dd>Windows 10 o successivo</dd></div>
+            <div class="fact-row"><dt>Dati</dt><dd>In locale, sul tuo computer</dd></div>
+            <div class="fact-row"><dt>Attivazione</dt><dd>Con file di licenza</dd></div>
+            <div class="fact-row"><dt>Tecnologie</dt><dd>Electron · React · TypeScript · Node.js · SQLite</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT ============
+       Sostituire ogni segnaposto con:
+         <figure class="shot"><img src="/assets/software/budget-planner/01.png" alt="[Cosa mostra]" loading="lazy" width="1280" height="800"></figure>
+  ======================================== -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Screenshot</h2>
+      <div class="shot-grid">
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALLAZIONE + STATO ============
+       Alla prima release pubblica: sostituire "Stato del progetto" con "Novità"
+       (una riga per versione) e il link alla pagina delle release — vedi software/_template.html.
+  ================================================= -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Installazione</h2>
+      <p class="page-note">Il download sarà attivo con la prima versione stabile. L'installazione funzionerà così:</p>
+      <ol class="install-steps">
+        <li>Scarica l'installer per Windows dalla pagina delle release.</li>
+        <li>Avvia l'installazione e apri Budget Planner.</li>
+        <li>Attiva l'applicazione aprendo il file di licenza che ricevi da me.</li>
+        <li>Gli aggiornamenti successivi arrivano in automatico, senza reinstallare.</li>
+      </ol>
+
+      <h3 class="subhead">Stato del progetto</h3>
+      <ul class="feature-list">
+        <li><strong>Oggi</strong> — versione 1.8 in test, non ancora pubblica.</li>
+        <li><strong>In lavorazione</strong> — una versione per Android che usa lo stesso motore di calcolo della versione desktop.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>Vuoi provarlo appena esce?</h2>
+          <p>Scrivimi: ti avviso quando la prima versione stabile è scaricabile.</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vesta — Software di Davide Vicenzi</title>
+<meta name="description" content="Vesta: app Android per l'inventario del guardaroba. Vestiti, scarpe e accessori catalogati con una foto e organizzati in più armadi.">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/vesta.html">
+<meta property="og:title"       content="Vesta — Software di Davide Vicenzi">
+<meta property="og:description" content="Vesta: app Android per l'inventario del guardaroba. Vestiti, scarpe e accessori catalogati con una foto e organizzati in più armadi.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/vesta.html">
+<meta name="author" content="Davide Vicenzi">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTESTAZIONE ============ -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>Vesta</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-dev">In sviluppo</span>
+        <ul class="platform-tags">
+          <li class="platform-tag">Android</li>
+          <li class="platform-tag">Dati in locale</li>
+        </ul>
+      </div>
+
+      <h1>Vesta</h1>
+      <p class="page-lead">Un'app Android per tenere l'inventario di vestiti, scarpe e accessori: cosa possiedi, dove si trova e da quanto tempo ce l'hai.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
+  <section class="section section-tight">
+    <div class="section-inner two-col">
+      <div class="col-main">
+        <h2>Cosa fa</h2>
+        <div class="prose">
+          <p>Vesta non è un social di moda né un generatore di outfit: è uno strumento di inventario e organizzazione personale. Ogni capo ha una foto e una piccola scheda, e appartiene a un armadio. È utile soprattutto a chi vive tra più case, vuole evitare doppioni o capire cosa rinnovare e cosa donare.</p>
+          <p>Aggiungere un capo richiede pochi tocchi: l'unico campo obbligatorio è la categoria, tutto il resto si può completare dopo.</p>
+        </div>
+
+        <h3 class="subhead">Funzioni principali</h3>
+        <ul class="feature-list">
+          <li><strong>Più armadi</strong> — fisici o logici, ciascuno con la sua posizione; un capo si sposta da un armadio all'altro in un tocco.</li>
+          <li><strong>Scheda del capo</strong> — foto, categoria, colore principale, data di acquisto anche approssimativa, tag liberi e note.</li>
+          <li><strong>Dashboard</strong> — totale dei capi, distribuzione per categoria, capi più vecchi e appena aggiunti.</li>
+          <li><strong>Ricerca e filtri</strong> — per armadio, categoria, colore, età e tag, più la ricerca testuale.</li>
+          <li><strong>Backup</strong> — export di dati e foto in un unico file, ripristinabile.</li>
+          <li><strong>Multilingua</strong> — l'app è pensata fin dall'inizio per più lingue.</li>
+        </ul>
+      </div>
+
+      <aside class="col-side">
+        <div class="spec-sheet">
+          <div class="spec-sheet-head">Scheda tecnica</div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Piattaforma</dt><dd>Android</dd></div>
+            <div class="fact-row"><dt>Stato</dt><dd>In sviluppo — prima versione</dd></div>
+            <div class="fact-row"><dt>Dati</dt><dd>In locale, sul telefono</dd></div>
+            <div class="fact-row"><dt>Distribuzione</dt><dd>File APK da GitHub Releases</dd></div>
+            <div class="fact-row"><dt>Tecnologie</dt><dd>Flutter · Dart · SQLite</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT ============
+       Sostituire ogni segnaposto con:
+         <figure class="shot"><img src="/assets/software/vesta/01.png" alt="[Cosa mostra]" loading="lazy" width="720" height="1280"></figure>
+  ======================================== -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Screenshot</h2>
+      <div class="shot-grid shot-grid-phone">
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALLAZIONE + STATO ============
+       Alla prima release pubblica: sostituire "Stato del progetto" con "Novità"
+       (una riga per versione) e il link alla pagina delle release — vedi software/_template.html.
+  ================================================= -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Installazione</h2>
+      <p class="page-note">Il download sarà attivo con la prima versione stabile. Vesta si installerà da file APK:</p>
+      <ol class="install-steps">
+        <li>Dal telefono, scarica il file APK dalla pagina delle release.</li>
+        <li>Apri il file: Android chiede di autorizzare l'installazione da questa origine (il browser o il gestore dei file). Consentila.</li>
+        <li>Completa l'installazione e apri Vesta.</li>
+        <li>Per aggiornare, scarica e installa l'APK più recente: i tuoi dati restano al loro posto.</li>
+      </ol>
+      <p class="page-note">Accanto a ogni file pubblicato troverai l'impronta SHA-256, per verificare che il download sia integro.</p>
+
+      <h3 class="subhead">Stato del progetto</h3>
+      <ul class="feature-list">
+        <li><strong>Oggi</strong> — prima versione in sviluppo.</li>
+        <li><strong>In programma</strong> — pubblicazione su Google Play e sincronizzazione tra più dispositivi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>Vuoi provarla appena esce?</h2>
+          <p>Scrivimi: ti avviso quando la prima versione stabile è scaricabile.</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piping — Software di Davide Vicenzi</title>
+<meta name="description" content="Piping: applicazione per il calcolo delle perdite di carico in condotte per liquidi e aria, con catalogo accessori e storico delle revisioni.">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/piping.html">
+<meta property="og:title"       content="Piping — Software di Davide Vicenzi">
+<meta property="og:description" content="Piping: applicazione per il calcolo delle perdite di carico in condotte per liquidi e aria, con catalogo accessori e storico delle revisioni.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/piping.html">
+<meta name="author" content="Davide Vicenzi">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTESTAZIONE ============ -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>Piping</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-dev">In sviluppo</span>
+        <ul class="platform-tags">
+          <li class="platform-tag">Web app</li>
+          <li class="platform-tag">Uso locale</li>
+        </ul>
+      </div>
+
+      <h1>Piping</h1>
+      <p class="page-lead">Un'applicazione per calcolare le perdite di carico in condotte, per liquidi e per aria, e ritrovare ogni calcolo anche a distanza di mesi.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
+  <section class="section section-tight">
+    <div class="section-inner two-col">
+      <div class="col-main">
+        <h2>Cosa fa</h2>
+        <div class="prose">
+          <p>Piping calcola le perdite di carico distribuite e concentrate di una linea con il modello di Darcy-Weisbach e la correlazione di Colebrook-White. Ogni calcolo è archiviato per cliente, commessa, linea e revisione: una commessa raccoglie più linee — aspirazione, mandata, scarico — e ognuna ha la sua storia.</p>
+          <p>Il motore di calcolo è un modulo indipendente, coperto da test automatici e condiviso con <a href="/software/abatix.html" class="inline-link">AbatiX</a>: una correzione fatta una volta vale per tutte le applicazioni.</p>
+        </div>
+
+        <h3 class="subhead">Funzioni principali</h3>
+        <ul class="feature-list">
+          <li><strong>Liquidi e aria</strong> — per l'aria, densità e viscosità sono calcolate da temperatura e pressione.</li>
+          <li><strong>Condotti circolari e rettangolari</strong> — con diametri commerciali e dimensionamento inverso della linea.</li>
+          <li><strong>Catalogo degli accessori</strong> — valvole, curve, filtri e altri componenti con i rispettivi coefficienti di perdita.</li>
+          <li><strong>Verifiche</strong> — comprimibilità del gas e velocità minima per il trasporto di polveri.</li>
+          <li><strong>Grandezze di linea</strong> — termine geodetico, volume, tempo di residenza e potenza dissipata.</li>
+          <li><strong>Storico</strong> — ogni linea conserva le sue revisioni.</li>
+        </ul>
+      </div>
+
+      <aside class="col-side">
+        <div class="spec-sheet">
+          <div class="spec-sheet-head">Scheda tecnica</div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Piattaforma</dt><dd>Web app, gira in locale sul PC</dd></div>
+            <div class="fact-row"><dt>Stato</dt><dd>In sviluppo — versione 1.0</dd></div>
+            <div class="fact-row"><dt>Utenti</dt><dd>Uso singolo</dd></div>
+            <div class="fact-row"><dt>Dati</dt><dd>In locale, sul tuo computer</dd></div>
+            <div class="fact-row"><dt>Tecnologie</dt><dd>JavaScript · Node.js · SQLite</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT ============
+       Sostituire ogni segnaposto con:
+         <figure class="shot"><img src="/assets/software/piping/01.png" alt="[Cosa mostra]" loading="lazy" width="1280" height="800"></figure>
+  ======================================== -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Screenshot</h2>
+      <div class="shot-grid">
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALLAZIONE + STATO ============
+       Alla prima release pubblica: sostituire "Stato del progetto" con "Novità"
+       (una riga per versione) e il link alla pagina delle release — vedi software/_template.html.
+  ================================================= -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Installazione</h2>
+      <p class="page-note">Le modalità di installazione saranno pubblicate qui insieme alla prima versione stabile.</p>
+
+      <h3 class="subhead">Stato del progetto</h3>
+      <ul class="feature-list">
+        <li><strong>Oggi</strong> — versione 1.0 in sviluppo, come applicazione autonoma e come modulo di AbatiX.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>Ti serve uno strumento così?</h2>
+          <p>Scrivimi: ti avviso al rilascio, o ne parliamo se hai un'esigenza specifica.</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>
