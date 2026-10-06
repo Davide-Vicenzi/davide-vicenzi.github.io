@@ -72,7 +72,8 @@
 
     function setActiveLink(id){
       for(var i=0; i<navLinks.length; i++){
-        var match = navLinks[i].getAttribute('href') === '#' + id;
+        /* .hash e non l'href intero: nelle pagine progetto i link sono "/#sezione" */
+        var match = navLinks[i].hash === '#' + id;
         navLinks[i].classList.toggle('active', match);
       }
     }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Planner Annuale — Software di Davide Vicenzi</title>
+<meta name="description" content="App desktop per pianificare il budget familiare con la logica del controllo di gestione: piano, consuntivo e proiezione a fine anno. Dati solo in locale.">
+
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/budget-planner.html">
+<meta property="og:title"       content="Budget Planner Annuale — Software di Davide Vicenzi">
+<meta property="og:description" content="App desktop per pianificare il budget familiare con la logica del controllo di gestione: piano, consuntivo e proiezione a fine anno. Dati solo in locale.">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/budget-planner.html">
+<meta name="author" content="Davide Vicenzi">
+
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main" class="hub-pagina">
+
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>Budget Planner Annuale</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-inuse">In uso</span>
+      </div>
+
+      <h1>Budget Planner Annuale</h1>
+      <p class="page-lead">Applicazione per pianificare il budget personale e familiare da un anno all'altro con la logica del controllo di gestione (piano, consuntivo, proiezione), non un semplice registro delle spese. Confronta pianificato, speso e incassato, classifica i movimenti bancari e tiene conto della fiscalità italiana nella stima del netto. È distribuita come app desktop per Windows, con una versione mobile local-first in sviluppo sullo stesso core.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Il problema</h2>
+      <div class="prose">
+        <p>I fogli di calcolo per il budget familiare diventano ingestibili da un anno all'altro: le categorie cambiano, i movimenti vanno classificati a mano, le regole fiscali variano.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Come funziona</h2>
+      <div class="hub-passo">
+        <h3 class="subhead">1. Entrate</h3>
+        <div class="prose">
+          <p>Si inseriscono i percettori di reddito della famiglia. Per ciascuno si sceglie il tipo (importo manuale, dipendente, forfettario, ordinario) e l'app stima il netto annuale con le regole fiscali italiane. Per un dipendente bastano la retribuzione lorda, la regione e il comune.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/01-entrate.png"><img src="/assets/software/budget-planner/01-entrate.png" alt="Schermata delle entrate con più percettori" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">2. Struttura delle categorie</h3>
+        <div class="prose">
+          <p>Si definiscono categorie e sottovoci di spesa. In questa fase non si inseriscono importi.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/02-struttura.png"><img src="/assets/software/budget-planner/02-struttura.png" alt="Albero delle categorie" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">3. Storico e pianificazione</h3>
+        <div class="prose">
+          <p>Nel passo «Storico» si registrano le spese dell'anno precedente, per categoria e sottovoce: con un comando diventano la base del pianificato. Nel passo «Pianificazione» si ritocca poi ogni voce, ragionando in euro all'anno o al mese; il report mostra netto, allocato, residuo e ripartizione fra spese fisse, variabili e risparmi.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/03-pianificazione.png"><img src="/assets/software/budget-planner/03-pianificazione.png" alt="Pianificazione del budget" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">4. Importazione dei movimenti</h3>
+        <div class="prose">
+          <p>Si importa l'estratto conto da Excel, CSV o PDF, oppure si inseriscono i movimenti a mano. La lettura dei PDF è best-effort: quelli scansionati, cioè in forma di immagine, non sono leggibili e richiedono l'inserimento manuale. Il file non entra subito nei conti: l'app prepara una bozza da rivedere, in cui ogni riga si può correggere o escludere prima di confermare l'importazione. Classifica le spese con le regole dell'utente, scritte a mano o apprese dalle sue correzioni, e scarta i giroconti fra conti propri. Nella bozza la categoria scelta per una riga vale anche per le altre dello stesso esercente, e gli accrediti dello stipendio si assegnano al percettore.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/04-importazione.png"><img src="/assets/software/budget-planner/04-importazione.png" alt="Importazione dei movimenti" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">5. Classificazione delle spese rimaste</h3>
+        <div class="prose">
+          <p>Dopo l'importazione, il riquadro «Classifica per esercente» raggruppa le spese rimaste senza categoria: una scelta vale per tutto il gruppo. Le altre si isolano con il filtro «Da classificare» e si sistemano una a una o con selezione multipla. Ogni scelta diventa una regola riutilizzata nelle importazioni successive.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/05-da-classificare.png"><img src="/assets/software/budget-planner/05-da-classificare.png" alt="Spese da classificare" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">6. Report globale</h3>
+        <div class="prose">
+          <p>Netto previsto, pianificato, speso e incassato in un unico quadro, con il saldo dell'anno (entrate meno uscite), la proiezione di spesa a fine anno e gli alert, per esempio sulle spese ancora da classificare, che restano fuori dai totali. In fondo compaiono i suggerimenti per l'anno successivo, ricavati dallo scostamento fra pianificato e speso. Il report spese segnala budget superato e spese ricorrenti che saltano o cambiano importo.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/06-report-globale.png"><img src="/assets/software/budget-planner/06-report-globale.png" alt="Report globale" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo">
+        <h3 class="subhead">7. Cambio d'anno</h3>
+        <div class="prose">
+          <p>Il piano del nuovo anno si crea dal selettore dell'anno, in alto: nasce come copia del piano attivo e resta in attesa finché non lo si seleziona dallo stesso elenco. Le spese reali dell'anno chiuso diventano lo storico del piano nuovo.</p>
+        </div>
+        <figure class="shot hub-shot"><a href="/assets/software/budget-planner/07-nuovo-anno.png"><img src="/assets/software/budget-planner/07-nuovo-anno.png" alt="Creazione del piano del nuovo anno" width="1440" height="900" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>In più</h2>
+      <ul class="feature-list">
+        <li>Finanziamenti con ammortamento alla francese.</li>
+        <li>Export in Excel del report di pianificazione.</li>
+        <li>Esclusione dei movimenti di altre persone sui conti cointestati.</li>
+        <li>Backup e ripristino, con aggiornamenti automatici dell'app.</li>
+        <li>Teoria fiscale (RAL, IRPEF, INPS, forfettario) raggiungibile da link contestuali.</li>
+      </ul>
+      <div class="prose">
+        <p>I calcoli fiscali sono stime a scopo di pianificazione, non una busta paga né una dichiarazione dei redditi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Scelte tecniche</h2>
+      <div class="prose">
+        <p>L'obiettivo era tenere i dati finanziari solo sul dispositivo dell'utente e scrivere i calcoli una volta sola, riusabili identici su desktop e mobile.</p>
+      </div>
+      <ul class="feature-list">
+        <li><strong>Core separato:</strong> le logiche di calcolo vivono nel backend come unica fonte di verità. Motori di calcolo, schema e route stanno in un modulo che non dipende né da Node né da Express, così lo stesso codice può girare anche sul telefono dietro un database SQLite WASM.</li>
+        <li><strong>Desktop:</strong> guscio Electron con licenza verificata offline tramite firma Ed25519 e aggiornamenti automatici da un canale di sole release.</li>
+        <li><strong>Sicurezza locale:</strong> il server ascolta solo su localhost, controlla Host e Origin contro DNS rebinding e richieste da altri siti, e imposta CSP e header di sicurezza.</li>
+        <li><strong>Test automatici</strong> su motore fiscale, cambio d'anno, riconoscimento dei movimenti, sicurezza e indipendenza del core.</li>
+        <li><strong>Stack:</strong> React e TypeScript con Vite; Node.js ed Express con SQLite nativo (<code>node:sqlite</code>), senza moduli da compilare.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Stato e prossimi sviluppi</h2>
+      <div class="prose">
+        <p>L'app desktop per Windows è in uso personale e si aggiorna da sola. Una versione mobile local-first, sullo stesso core, è in sviluppo: il core è stato separato dal server e il guscio Capacitor con SQLite WASM è stato avviato. Limiti noti: l'importazione dei PDF funziona al meglio possibile e non legge i documenti scansionati; la pianificazione riguarda un anno alla volta; il fisco è modellato solo per l'Italia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>Vuoi parlarne?</h2>
+          <p>Scrivimi per un confronto su questo strumento o su un&#x27;applicazione su misura.</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Scrivimi
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>

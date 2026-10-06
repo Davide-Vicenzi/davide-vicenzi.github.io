@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!--
+  TEMPLATE PAGINA PROGETTO
+  ========================
+  Per aggiungere un nuovo software:
+    1. Copiare questo file in software/<slug>.html e sostituire tutti i segnaposto [TRA PARENTESI QUADRE].
+    2. Aggiungere la card corrispondente in index.html, sezione "Software & App".
+    3. Aggiungere l'URL della pagina in sitemap.xml.
+    4. Mettere gli screenshot in assets/software/<slug>/.
+
+  Questo file non viene pubblicato: GitHub Pages ignora i file che iniziano con "_".
+
+  Stati disponibili (badge + azione principale, da tenere allineati alla card in home):
+    status-dev        "In sviluppo"   → "Avvisami al rilascio"  href="/#contatti"
+    status-demo       "Su richiesta"  → "Richiedi una demo"     href="/#contatti"
+    status-available  "Disponibile"   → "Scarica"
+                      href="https://github.com/Davide-Vicenzi/<slug>-releases/releases/latest"
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Nome progetto] — Software di Davide Vicenzi</title>
+<meta name="description" content="[Descrizione in una frase, 140-160 caratteri.]">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://davide-vicenzi.github.io/software/[slug].html">
+<meta property="og:title"       content="[Nome progetto] — Software di Davide Vicenzi">
+<meta property="og:description" content="[Descrizione in una frase.]">
+<meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
+<meta property="og:locale"      content="it_IT">
+<meta name="twitter:card"       content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon"             type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
+
+<!-- SEO -->
+<link rel="canonical" href="https://davide-vicenzi.github.io/software/[slug].html">
+<meta name="author" content="Davide Vicenzi">
+<meta name="robots" content="noindex">
+
+<!-- Mobile browser chrome -->
+<meta name="theme-color" content="#0E3F35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="nav-inner">
+
+    <div class="logo-area">
+      <div class="nav-avatar is-visible" aria-hidden="true">
+        <img src="/foto-profilo.jpg" alt="Davide Vicenzi">
+      </div>
+      <a href="/" class="logo" aria-label="Torna alla home">DV<span class="logo-dot">.</span></a>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="/">Home</a>
+      <a href="/#chi-sono">Chi sono</a>
+      <a href="/#board">Board</a>
+      <a href="/#software" class="active">Software</a>
+      <a href="/#percorso">Percorso</a>
+      <a href="/#contatti">Contatti</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/#contatti" class="btn btn-primary btn-sm btn-nav-cta" aria-label="Contattami">Contattami</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Attiva tema scuro">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTESTAZIONE ============ -->
+  <section class="page-hero">
+    <div class="section-inner">
+      <nav class="breadcrumb" aria-label="Percorso">
+        <a href="/#software">Software &amp; App</a>
+        <span aria-hidden="true">/</span>
+        <span>[Nome progetto]</span>
+      </nav>
+
+      <div class="page-hero-meta">
+        <span class="status-badge status-dev">In sviluppo</span>
+        <ul class="platform-tags">
+          <li class="platform-tag">[Piattaforma]</li>
+        </ul>
+      </div>
+
+      <h1>[Nome progetto]</h1>
+      <p class="page-lead">[Cosa fa e per chi, in due frasi.]</p>
+
+      <div class="hero-cta">
+        <!-- Stato "Disponibile": sostituire con
+             <a class="btn btn-primary" href="https://github.com/Davide-Vicenzi/[slug]-releases/releases/latest" target="_blank" rel="noopener">Scarica l'ultima versione …</a> -->
+        <a class="btn btn-primary" href="/#contatti">
+          Avvisami al rilascio
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
+  <section class="section section-tight">
+    <div class="section-inner two-col">
+      <div class="col-main">
+        <h2>Cosa fa</h2>
+        <div class="prose">
+          <p>[Primo paragrafo: il problema che risolve.]</p>
+          <p>[Secondo paragrafo: come lo risolve, cosa lo distingue.]</p>
+        </div>
+
+        <h3 class="subhead">Funzioni principali</h3>
+        <ul class="feature-list">
+          <li><strong>[Funzione]</strong> — [descrizione in una riga].</li>
+          <li><strong>[Funzione]</strong> — [descrizione in una riga].</li>
+          <li><strong>[Funzione]</strong> — [descrizione in una riga].</li>
+        </ul>
+      </div>
+
+      <aside class="col-side">
+        <div class="spec-sheet">
+          <div class="spec-sheet-head">Scheda tecnica</div>
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Piattaforma</dt><dd>[Windows / Android / Web app]</dd></div>
+            <div class="fact-row"><dt>Stato</dt><dd>[In sviluppo / Disponibile / Demo su richiesta]</dd></div>
+            <div class="fact-row"><dt>Versione</dt><dd>[1.0.0]</dd></div>
+            <div class="fact-row"><dt>Requisiti</dt><dd>[Windows 10 o successivo / Android 8 o successivo]</dd></div>
+            <div class="fact-row"><dt>Licenza</dt><dd>[Gratuita / Su licenza]</dd></div>
+            <div class="fact-row"><dt>Tecnologie</dt><dd>[Stack]</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOT ============
+       Sostituire ogni segnaposto con:
+         <figure class="shot"><img src="/assets/software/[slug]/01.png" alt="[Cosa mostra]" loading="lazy" width="1280" height="800"></figure>
+       Per app mobile usare class="shot-grid shot-grid-phone" (formato verticale, 4 colonne).
+  ======================================== -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Screenshot</h2>
+      <div class="shot-grid">
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+        <div class="shot shot-placeholder">Screenshot in arrivo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTALLAZIONE + NOVITÀ ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Come si installa</h2>
+      <ol class="install-steps">
+        <li>[Primo passo.]</li>
+        <li>[Secondo passo.]</li>
+        <li>[Terzo passo.]</li>
+      </ol>
+
+      <!-- Per gli APK: indicare versione minima di Android e impronta SHA-256 del file pubblicato. -->
+
+      <h3 class="subhead">Novità</h3>
+      <ul class="feature-list">
+        <li><strong>[1.0.0]</strong> — [cosa cambia in questa versione].</li>
+      </ul>
+      <p class="page-note">
+        Storico completo nella <a href="https://github.com/Davide-Vicenzi/[slug]-releases/releases" target="_blank" rel="noopener" class="inline-link">pagina delle release</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <div class="page-cta">
+        <div>
+          <h2>[Domanda di chiusura]</h2>
+          <p>[Invito al contatto in una frase.]</p>
+        </div>
+        <a class="btn btn-primary" href="/#contatti">
+          Scrivimi
+          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>© 2026 Davide Vicenzi — Libero professionista</span>
+    <a href="#main">Torna su ↑</a>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
+</body>
+</html>
