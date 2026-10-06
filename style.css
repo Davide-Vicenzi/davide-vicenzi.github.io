@@ -753,3 +753,48 @@ h2 + .page-note{margin:0 0 1.6rem;}
   .page-cta{padding:1.5rem;}
   .footer-inner{flex-direction:column; gap:.6rem; text-align:center;}
 }
+
+/* ==== INIZIO BLOCCO HUB ====
+   Regole aggiunte dall'hub dei progetti per le pagine generate (software/<slug>.html), per
+   il badge «In uso» e per le card dei progetti. Il blocco viene riscritto a ogni
+   pubblicazione: le modifiche fatte a mano qui dentro si perdono. Fuori dal blocco l'hub
+   non tocca nulla. */
+
+/* Badge «In uso»: progetto in uso personale, non scaricabile */
+.status-inuse{
+  color:var(--primary-strong); background:transparent;
+  border-color:color-mix(in srgb, var(--primary) 45%, transparent);
+}
+.status-inuse::before{background:var(--primary);}
+
+/* Card con il solo «Dettagli»: resta a destra, come nelle card che hanno anche un pulsante */
+.project-actions > .text-link:only-child{margin-left:auto;}
+
+/* Pagine generate: un passo di «Come funziona» con il suo screenshot */
+.hub-pagina .hub-passo{margin-top:3rem;}
+.hub-pagina h2 + .hub-passo{margin-top:1.8rem;}
+.hub-pagina .hub-shot{aspect-ratio:auto; margin-top:1.4rem;}
+.hub-pagina .hub-shot img{display:block; height:auto; object-fit:contain;}
+/* Ogni screenshot è un collegamento all'immagine: un clic la apre a piena dimensione */
+.hub-pagina .hub-shot a{display:block; width:100%; cursor:zoom-in;}
+/* Schermate del telefono: intere, senza ritaglio, in una colonna stretta */
+.hub-pagina .hub-shot-telefono{max-width:300px;}
+/* Alle larghezze da computer la schermata del telefono sta accanto al testo del passo;
+   sotto i 961 pixel resta sotto il testo, come le altre */
+@media (min-width:961px){
+  .hub-pagina .hub-passo-affiancato{
+    display:grid; grid-template-columns:minmax(0,42em) 300px; column-gap:4rem; align-items:start;
+  }
+  .hub-pagina .hub-passo-affiancato .hub-shot-telefono{margin-top:0;}
+}
+
+/* Pagine generate: testo, elenchi e codice nella stessa sezione */
+.hub-pagina .prose p:last-child{margin-bottom:0;}
+.hub-pagina .prose + .feature-list,
+.hub-pagina .feature-list + .prose{margin-top:1.2rem;}
+.hub-pagina code{
+  font-family:var(--font-mono); font-size:.9em;
+  background:var(--surface-alt); border:1px solid var(--line); border-radius:var(--radius);
+  padding:.05em .35em;
+}
+/* ==== FINE BLOCCO HUB ==== */
