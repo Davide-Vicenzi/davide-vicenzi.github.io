@@ -4,27 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vesta — Software di Davide Vicenzi</title>
-<meta name="description" content="Vesta: app Android per l'inventario del guardaroba. Vestiti, scarpe e accessori catalogati con una foto e organizzati in più armadi.">
+<meta name="description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono, senza account.">
 
-<!-- Open Graph / LinkedIn -->
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://davide-vicenzi.github.io/software/vesta.html">
 <meta property="og:title"       content="Vesta — Software di Davide Vicenzi">
-<meta property="og:description" content="Vesta: app Android per l'inventario del guardaroba. Vestiti, scarpe e accessori catalogati con una foto e organizzati in più armadi.">
+<meta property="og:description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono, senza account.">
 <meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
 <meta property="og:locale"      content="it_IT">
 <meta name="twitter:card"       content="summary_large_image">
 
-<!-- Favicon -->
 <link rel="icon"             type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon"   type="image/x-icon"  href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png">
 
-<!-- SEO -->
 <link rel="canonical" href="https://davide-vicenzi.github.io/software/vesta.html">
 <meta name="author" content="Davide Vicenzi">
 
-<!-- Mobile browser chrome -->
 <meta name="theme-color" content="#0E3F35">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,9 +66,8 @@
   </div>
 </header>
 
-<main id="main">
+<main id="main" class="hub-pagina">
 
-  <!-- ============ INTESTAZIONE ============ -->
   <section class="page-hero">
     <div class="section-inner">
       <nav class="breadcrumb" aria-label="Percorso">
@@ -82,96 +77,138 @@
       </nav>
 
       <div class="page-hero-meta">
-        <span class="status-badge status-dev">In sviluppo</span>
-        <ul class="platform-tags">
-          <li class="platform-tag">Android</li>
-          <li class="platform-tag">Dati in locale</li>
-        </ul>
+        <span class="status-badge status-inuse">In uso</span>
       </div>
 
       <h1>Vesta</h1>
-      <p class="page-lead">Un'app Android per tenere l'inventario di vestiti, scarpe e accessori: cosa possiedi, dove si trova e da quanto tempo ce l'hai.</p>
+      <p class="page-lead">App Android per sapere cosa c'è nel guardaroba, dove si trova e da quanto lo si possiede. Catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono. Non è un outfit planner né un social: è uno strumento di inventario.</p>
 
       <div class="hero-cta">
-        <a class="btn btn-primary" href="/#contatti">
-          Avvisami al rilascio
-          <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
         <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ COSA FA + SCHEDA TECNICA ============ -->
   <section class="section section-tight">
-    <div class="section-inner two-col">
-      <div class="col-main">
-        <h2>Cosa fa</h2>
-        <div class="prose">
-          <p>Vesta non è un social di moda né un generatore di outfit: è uno strumento di inventario e organizzazione personale. Ogni capo ha una foto e una piccola scheda, e appartiene a un armadio. È utile soprattutto a chi vive tra più case, vuole evitare doppioni o capire cosa rinnovare e cosa donare.</p>
-          <p>Aggiungere un capo richiede pochi tocchi: l'unico campo obbligatorio è la categoria, tutto il resto si può completare dopo.</p>
-        </div>
-
-        <h3 class="subhead">Funzioni principali</h3>
-        <ul class="feature-list">
-          <li><strong>Più armadi</strong> — fisici o logici, ciascuno con la sua posizione; un capo si sposta da un armadio all'altro in un tocco.</li>
-          <li><strong>Scheda del capo</strong> — foto, categoria, colore principale, data di acquisto anche approssimativa, tag liberi e note.</li>
-          <li><strong>Dashboard</strong> — totale dei capi, distribuzione per categoria, capi più vecchi e appena aggiunti.</li>
-          <li><strong>Ricerca e filtri</strong> — per armadio, categoria, colore, età e tag, più la ricerca testuale.</li>
-          <li><strong>Backup</strong> — export di dati e foto in un unico file, ripristinabile.</li>
-          <li><strong>Multilingua</strong> — l'app è pensata fin dall'inizio per più lingue.</li>
-        </ul>
+    <div class="section-inner">
+      <h2>Il problema</h2>
+      <div class="prose">
+        <p>Senza una visione d'insieme si comprano doppioni e i capi dimenticati restano inutilizzati. Chi ha più abitazioni fatica anche a ricordare cosa ha lasciato dove.</p>
       </div>
-
-      <aside class="col-side">
-        <div class="spec-sheet">
-          <div class="spec-sheet-head">Scheda tecnica</div>
-          <dl class="fact-list">
-            <div class="fact-row"><dt>Piattaforma</dt><dd>Android</dd></div>
-            <div class="fact-row"><dt>Stato</dt><dd>In sviluppo — prima versione</dd></div>
-            <div class="fact-row"><dt>Dati</dt><dd>In locale, sul telefono</dd></div>
-            <div class="fact-row"><dt>Distribuzione</dt><dd>File APK da GitHub Releases</dd></div>
-            <div class="fact-row"><dt>Tecnologie</dt><dd>Flutter · Dart · SQLite</dd></div>
-          </dl>
-        </div>
-      </aside>
     </div>
   </section>
 
-  <!-- ============ INSTALLAZIONE + STATO ============
-       Alla prima release pubblica: sostituire "Stato del progetto" con "Novità"
-       (una riga per versione) e il link alla pagina delle release — vedi software/_template.html.
-  ================================================= -->
   <section class="section section-tight">
     <div class="section-inner">
-      <h2>Installazione</h2>
-      <p class="page-note">Il download sarà attivo con la prima versione stabile. Vesta si installerà da file APK:</p>
-      <ol class="install-steps">
-        <li>Dal telefono, scarica il file APK dalla pagina delle release.</li>
-        <li>Apri il file: Android chiede di autorizzare l'installazione da questa origine (il browser o il gestore dei file). Consentila.</li>
-        <li>Completa l'installazione e apri Vesta.</li>
-        <li>Per aggiornare, scarica e installa l'APK più recente: i tuoi dati restano al loro posto.</li>
-      </ol>
-      <p class="page-note">Accanto a ogni file pubblicato troverai l'impronta SHA-256, per verificare che il download sia integro.</p>
+      <h2>Come funziona</h2>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">1. Primo avvio</h3>
+          <div class="prose">
+            <p>Un onboarding breve porta a dare un nome al primo armadio e invita ad aggiungere i primi capi, con l'obiettivo di mostrare il primo capo catalogato il prima possibile. L'invito si può rimandare.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/01-onboarding.png"><img src="/assets/software/vesta/01-onboarding.png" alt="Onboarding" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">2. Armadi</h3>
+          <div class="prose">
+            <p>Si creano armadi fisici o logici, con nome, posizione facoltativa, icona e colore; l'elenco mostra quanti capi contiene ciascuno. Un capo appartiene a un armadio e si può spostare.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/02-armadi.png"><img src="/assets/software/vesta/02-armadi.png" alt="Elenco degli armadi" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">3. Inserimento di un capo</h3>
+          <div class="prose">
+            <p>Dal pulsante "+" si sceglie fotocamera o galleria, oppure si prosegue senza foto, poi si compila una scheda: la categoria è l'unico campo obbligatorio, il resto (colore, armadio, data di acquisto anche approssimativa, nome, tag, note) è opzionale. «Salva e aggiungi» salva il capo e ripropone subito l'inserimento del successivo, per catalogare in sequenza.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/03-scheda-capo.png"><img src="/assets/software/vesta/03-scheda-capo.png" alt="Scheda di un capo" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">4. Dashboard</h3>
+          <div class="prose">
+            <p>Mostra il totale dei capi, un invito a completare i capi senza data di acquisto, il numero di capi per armadio (solo con almeno due armadi), un grafico a barre delle categorie più numerose, i capi aggiunti di recente e quelli più vecchi con la loro età. Senza capi catalogati propone di aggiungerne uno.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/04-dashboard.png"><img src="/assets/software/vesta/04-dashboard.png" alt="Dashboard" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">5. Ricerca e filtri</h3>
+          <div class="prose">
+            <p>Ricerca per nome, note o tag, con filtri (armadio, categoria, colore, età, tag) mostrati come chip rimovibili, e ordinamento. I filtri di gruppi diversi si combinano fra loro; la categoria è una sola alla volta.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/05-ricerca.png"><img src="/assets/software/vesta/05-ricerca.png" alt="Ricerca con filtri" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+      <div class="hub-passo hub-passo-affiancato">
+        <div class="hub-passo-testo">
+          <h3 class="subhead">6. Backup e ripristino</h3>
+          <div class="prose">
+            <p>Dalle impostazioni si esporta l'intera collezione, foto comprese, in un file zip condivisibile e la si ripristina da un backup con conferma: il ripristino sostituisce tutto ciò che c'è sul dispositivo. La stessa schermata indica lo spazio occupato dalle foto.</p>
+          </div>
+        </div>
+        <figure class="shot hub-shot hub-shot-telefono"><a href="/assets/software/vesta/06-backup.png"><img src="/assets/software/vesta/06-backup.png" alt="Backup e spazio occupato" width="1080" height="2424" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
 
-      <h3 class="subhead">Stato del progetto</h3>
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>In più</h2>
       <ul class="feature-list">
-        <li><strong>Oggi</strong> — prima versione in sviluppo.</li>
-        <li><strong>In programma</strong> — pubblicazione su Google Play e sincronizzazione tra più dispositivi.</li>
+        <li>Foto compresse, per contenere lo spazio occupato.</li>
+        <li>Gestione delle foto non più collegate a nessun capo.</li>
+        <li>Tema chiaro, scuro o del dispositivo.</li>
+        <li>Lingue inglese e italiano.</li>
+        <li>Pagina "Come funziona" nelle impostazioni.</li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ CONTATTO ============ -->
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Scelte tecniche</h2>
+      <div class="prose">
+        <p>L'obiettivo era un'app che funzioni interamente sul telefono, senza account né server, e che possa crescere (sincronizzazione, riconoscimento da foto) senza dover riscrivere il modello dati.</p>
+      </div>
+      <ul class="feature-list">
+        <li><strong>Flutter e Dart</strong>, Android per primo; iOS possibile in seguito.</li>
+        <li><strong>Riverpod</strong> per lo stato e <strong>go_router</strong> per la navigazione.</li>
+        <li><strong>Drift</strong> (SQLite con migrazioni versionate) per la persistenza locale.</li>
+        <li><strong>Architettura per funzionalità</strong>, con livelli separati: l'interfaccia parla solo con i repository, mai direttamente con il database.</li>
+        <li><strong>Schema pensato per il futuro:</strong> chiavi UUID generate dal client, timestamp e cancellazione logica, campi opzionali già predisposti per sincronizzazione e riconoscimento da foto.</li>
+        <li><strong>Foto salvate con nome file relativo</strong>, per non perderle quando cambia il percorso dei documenti su Android.</li>
+        <li><strong>Nessuna stringa hardcoded:</strong> tutto passa dal sistema di localizzazione fin dall'inizio.</li>
+        <li><strong>Test</strong> su repository e logica dei filtri, più test dei widget.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="section-inner">
+      <h2>Stato e prossimi sviluppi</h2>
+      <div class="prose">
+        <p>L'app è in uso personale, con build di rilascio Android firmata; la pubblicazione su Play Store è da valutare.</p>
+        <p>Le funzionalità successive restano fuori dalla versione attuale: sincronizzazione cloud, riconoscimento automatico da foto e statistiche avanzate.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-tight">
     <div class="section-inner">
       <div class="page-cta">
         <div>
-          <h2>Vuoi provarla appena esce?</h2>
-          <p>Scrivimi: ti avviso quando la prima versione stabile è scaricabile.</p>
+          <h2>Vuoi parlarne?</h2>
+          <p>Scrivimi per un confronto su questo strumento o su un&#x27;applicazione su misura.</p>
         </div>
         <a class="btn btn-primary" href="/#contatti">
-          Avvisami al rilascio
+          Scrivimi
           <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -188,7 +225,6 @@
 </footer>
 
 <script src="/script.js"></script>
-<!-- Umami Analytics — privacy-first, no cookie, no banner GDPR necessario -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="aee1fbe9-f34b-44ff-8fbf-5df45b9bd2ed"></script>
 </body>
 </html>
