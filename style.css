@@ -526,7 +526,7 @@ ul{margin:0; padding:0;}
   padding:.2em .55em;
 }
 
-/* Stato del progetto: status-dev (default) · status-demo · status-available */
+/* Stato del progetto: status-dev (default) · status-demo · status-available · status-inuse */
 .status-badge{
   display:inline-flex; align-items:center; gap:.5em;
   font-family:var(--font-mono); font-size:.66rem; text-transform:uppercase; letter-spacing:.06em;
