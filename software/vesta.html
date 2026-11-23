@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vesta — Software di Davide Vicenzi</title>
-<meta name="description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono, senza account.">
+<meta name="description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. Senza account, nessun dato su cloud.">
 
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://davide-vicenzi.github.io/software/vesta.html">
 <meta property="og:title"       content="Vesta — Software di Davide Vicenzi">
-<meta property="og:description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono, senza account.">
+<meta property="og:description" content="App Android per l&#x27;inventario del guardaroba: catalogo con foto, più armadi, ricerca con filtri e backup completo. Senza account, nessun dato su cloud.">
 <meta property="og:image"       content="https://davide-vicenzi.github.io/og-image.png">
 <meta property="og:locale"      content="it_IT">
 <meta name="twitter:card"       content="summary_large_image">
@@ -81,7 +81,7 @@
       </div>
 
       <h1>Vesta</h1>
-      <p class="page-lead">App Android per sapere cosa c'è nel guardaroba, dove si trova e da quanto lo si possiede. Catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati restano sul telefono. Non è un outfit planner né un social: è uno strumento di inventario.</p>
+      <p class="page-lead">App Android per sapere cosa c'è nel guardaroba, dove si trova e da quanto lo si possiede. Catalogo con foto, più armadi, ricerca con filtri e backup completo. I dati non vanno su nessun cloud, nemmeno nel backup di Google del telefono. Non è un outfit planner né un social: è uno strumento di inventario.</p>
 
       <div class="hero-cta">
         <a class="btn btn-outline" href="/#software">Tutti i progetti</a>
@@ -184,6 +184,7 @@
         <li><strong>Architettura per funzionalità</strong>, con livelli separati: l'interfaccia parla solo con i repository, mai direttamente con il database.</li>
         <li><strong>Schema pensato per il futuro:</strong> chiavi UUID generate dal client, timestamp e cancellazione logica, campi opzionali già predisposti per sincronizzazione e riconoscimento da foto.</li>
         <li><strong>Foto salvate con nome file relativo</strong>, per non perderle quando cambia il percorso dei documenti su Android.</li>
+        <li><strong>Nessun dato nel backup di Google del telefono:</strong> la collezione passa a un telefono nuovo solo con il trasferimento diretto di Android, dove il telefono lo offre, o con il file di backup dell'app.</li>
         <li><strong>Nessuna stringa hardcoded:</strong> tutto passa dal sistema di localizzazione fin dall'inizio.</li>
         <li><strong>Test</strong> su repository e logica dei filtri, più test dei widget.</li>
       </ul>
